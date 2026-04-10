@@ -178,7 +178,7 @@
 
    <!-- Copyright Start -->
    <div class="container copyright text-center col-md-12 mt-4" style="background-color: #fff; color: #333; ">
-      <p>© <span>Copyright</span> <strong class="sitename">DEEP-METFPA collect</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="sitename">DEP-METFPA collect</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
          <!-- All the links in the footer should remain intact. -->
          <!-- You can delete the links only if you've purchased the pro version. -->

@@ -222,7 +222,7 @@
     <p style="font-size: 20px"><span style="margin-right: 300px">Directeur des Etudes</span> <span style="margin-left: 250px">Chef de Mission</span></p>
 
     <div class="footer">
-        &copy; METFPA / DEEP <span style="margin-left: 500px">MISSION DE SUIVI ET D’EVALUATION {{$etablissements->libelleanneescolaire ??  ' ' }}</span>
+        &copy; METFPA / DEP <span style="margin-left: 500px">MISSION DE SUIVI ET D'EVALUATION {{$etablissements->libelleanneescolaire ??  ' ' }}</span>
     </div>
 
 </body>

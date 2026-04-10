@@ -35,7 +35,7 @@ class InsertionserieController extends AdminController
             throw new \Exception("Aucun établissement choisi");
         }
 
-        $filePath_modele = asset('uploads/modele/DEEP_DONNEES.xlsx');
+        $filePath_modele = asset('uploads/modele/DEP_DONNEES.xlsx');
         $filePath_param = asset('uploads/modele/parametre_importation.pdf');
 
         $form->html('<a href="' . $filePath_modele . '" class="btn btn-success" target="_blank">Télécharger le modèle Excel</a>', 'Téléchargement du modèle');

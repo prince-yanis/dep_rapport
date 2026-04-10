@@ -44,7 +44,7 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="<?php echo e(asset ('assets/img/logo.png'), false); ?>" alt=""> -->
-        <h1 class="sitename">DEEP</h1><span>.</span>
+        <h1 class="sitename">DEP</h1><span>.</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -156,7 +156,7 @@
           <div class="col-xl-5 content">
             <h3>Qui sommes-nous</h3>
             <h2>Qui sommes-nous</h2>
-            <p>La mission de la DEEP est avant tout d’encadrer les promoteurs à fournir des établissements privés, respectant les normes pour garantir un environnement sain et inspirant nos enfants dans leur quête de l’excellence.</p>
+            <p>La mission de la DEP est avant tout d'encadrer les promoteurs à fournir des établissements privés, respectant les normes pour garantir un environnement sain et inspirant nos enfants dans leur quête de l'excellence.</p>
             <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
@@ -417,11 +417,11 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="https://jdeditionsmagazine.tv/storage/2023/11/JD-Editions-Mag-et-TV-METFPA-Reunion-de-la-rentree-2023-2024-DEEP-Etablissements-Prives-Bilan-et-Perspectives-1600x1101.jpg" class="img-fluid" alt="">
+              <img src="https://jdeditionsmagazine.tv/storage/2023/11/JD-Editions-Mag-et-TV-METFPA-Reunion-de-la-rentree-2023-2024-DEP-Etablissements-Prives-Bilan-et-Perspectives-1600x1101.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Branding 1</h4>
                 <p>Lorem ipsum, dolor sit</p>
-                <a href="https://jdeditionsmagazine.tv/storage/2023/11/JD-Editions-Mag-et-TV-METFPA-Reunion-de-la-rentree-2023-2024-DEEP-Etablissements-Prives-Bilan-et-Perspectives-1600x1101.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="https://jdeditionsmagazine.tv/storage/2023/11/JD-Editions-Mag-et-TV-METFPA-Reunion-de-la-rentree-2023-2024-DEP-Etablissements-Prives-Bilan-et-Perspectives-1600x1101.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -762,7 +762,7 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">DEEP-METFPA</span>
+            <span class="sitename">DEP-METFPA</span>
           </a>
           <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
@@ -808,7 +808,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="sitename">DEEP-METFPA collect</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="sitename">DEP-METFPA collect</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
