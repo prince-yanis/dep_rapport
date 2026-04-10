@@ -45,45 +45,11 @@ Route::get('/ficheobservation/{id}', [GeneratepdfController::class, 'observation
 
 Route::get('/emploisdutemps/{id}', [GeneratepdfController::class, 'emploi_du_temps']);
 
-//Route::post('miseajourplanning',['as'=>'miseajourplanning','uses' => 'PlanningController@ajaxUpdate']);
-//Route::get('planning',['as'=>'planning', 'uses'=> 'PlanningController@index'] );
+// Route::post('miseajourplanning', ['as' => 'miseajourplanning', 'uses' => 'PlanningController@ajaxUpdate']);
+// Route::get('planning', ['as' => 'planning', 'uses' => 'PlanningController@index']);
 Route::get('/api/itemscontrole', function (Request $request) {
     $sousrubriquecontroleId = $request->get('q');  // The 'q' parameter will be passed automatically by Laravel Admin's dependent select
     $items = Itemscontrole::where('sousrubriquecontrole_id', $sousrubriquecontroleId)
         ->get(['id', 'libelleitems']);
     return $items->pluck('libelleitems', 'id');
 });
-
-// Route::get('/codes', function () {
-//     $values = AdminRoleUser::select('admin_role_users.*', 'admin_users.*')
-// 		->join('admin_users', 'admin_role_users.user_id', '=', 'admin_users.id')
-// 		->where('role_id', 2)->get();
-	
-// 	foreach ($values as $value) {
-// 		// echo  $value->id .' - '. formaterMot($value->name) .' - '. formaterMot($value->username) . '<br>';
-// 		echo  $value->id .' - '. ($value->name) .' - '. formaterMot($value->name) . '<br>';
-// 		AdminUser::where('id', $value->id)->update([
-// 			'username' => formaterMot($value->name),
-// 			'name' => formaterMot($value->name),
-// 		]);
-// 	}
-	
-// 	$values = Etablissement::get();
-// 	foreach ($values as $value) {
-// 		echo  $value->id .' - '. $value->code .' - '. formaterMot($value->code) . '<br>';
-// 		Etablissement::where('id', $value->id)->update([
-// 			'code' => formaterMot($value->code),
-// 		]);
-// 	}
-// });
-
-// function formaterMot($mot) {
-//     $longueur = strlen($mot);
-//     if ($longueur < 6) {
-//         $zerosAAjouter = 6 - $longueur;
-//         $motFormate = str_repeat('0', $zerosAAjouter) . $mot;
-//     } else {
-//         $motFormate = $mot;
-//     }
-//     return $motFormate;
-// }
