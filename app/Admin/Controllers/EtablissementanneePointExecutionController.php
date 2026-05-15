@@ -262,6 +262,8 @@ class EtablissementanneePointExecutionController extends AdminController
                 <span >|</span>
                 <span style="font-size: 14px";><a style="color:red !important;" href="/admin/etabanneepoint/' . $EtabAnnee->id . '/edit">Progression</a></span>
                 <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneemiseenstage/' . $EtabAnnee->id . '/edit">Mise en Stage</a></span>
+                <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneeindicateurs/' . $EtabAnnee->id . '/edit">Indicateurs</a></span>
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneeinfrastructure/' . $EtabAnnee->id . '/edit">Infrastructure et Locaux</a></span>
@@ -356,7 +358,7 @@ class EtablissementanneePointExecutionController extends AdminController
                 ->where('etablissements_id', '=', session('etablissementchoisi'))
                 ->first();
 
-            return redirect('admin/etabanneeindicateurs/' . $EtabAnnee->id . '/edit');
+            return redirect('admin/etabanneemiseenstage/' . $EtabAnnee->id . '/edit');
         });
 
         return $form;

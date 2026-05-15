@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Designationinfrastructure;
 use Encore\Admin\Controllers\AdminController;
 
-class EtablissementanneeBesoinPersonnelAdminController extends AdminController
+class EtablissementanneeBesoinPersonnelAdmin1erController extends AdminController
 {
     /**
      * Title for current resource.

@@ -148,7 +148,9 @@ class EtablissementDetails2emeSemestreController extends AdminController
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneeinfrastructure2eme/'. $EtabAnnee->id .'/edit">Infrastructure et Locaux</a></span>
                 <span >|</span>
-                <span style="font-size: 14px";><a href="/admin/etabanneebesoinpersonnelens/'. $EtabAnnee->id .'/edit">Besoin en Matériels et Divers</a></span>
+                <span style="font-size: 14px";><a href="/admin/etabanneeactivitesextrascolaire/'. $EtabAnnee->id .'/edit">Activités Extra-scolaires</a></span>
+                <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneebesoinmateriel/'. $EtabAnnee->id .'/edit">Besoin en Matériels et Divers</a></span>
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneeprevision2eme/'. $EtabAnnee->id .'/edit">Prévision</a></span>
                 <span >|</span>

@@ -13,6 +13,7 @@ use App\Models\Materiel;
 use App\Models\Personnel;
 use App\Models\Discipline;
 use App\Models\Association;
+use App\Models\Filiere;
 use App\Models\AdminRoleUser;
 use App\Models\Anneescolaire;
 use App\Models\Etablissement;
@@ -27,7 +28,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Designationinfrastructure;
 use Encore\Admin\Controllers\AdminController;
 
-class EtablissementanneeSocioController extends AdminController
+class EtablissementanneeMiseEnStageController extends AdminController
 {
     /**
      * Title for current resource.
@@ -53,12 +54,13 @@ class EtablissementanneeSocioController extends AdminController
         if (in_array($current_role->role_id, array(2))) {
             $grid->model()->where('etablissements_id', '=', $etablissement->id);
         }
-        $grid->column('existecloture', __('Existe cloture'));
-        $grid->column('problemeequipement', __("Probleme d'equipement"));
+        $grid->column('filieres_id', __('Filieres id'));
+        $grid->column('etablissementannees_id', __('Etablissementannees id'));
+        $grid->column('nombre_stagiaire', __('Nombre stagiaire'));
+        $grid->column('nombre_mis_en_stage', __('Nombre mis en stage'));
+        $grid->column('taux', __('Taux'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
-        $grid->column('anneescolaires_id', __('Annee scolaires '));
-        $grid->column('etablissements_id', __('Etablissements'));
         // $grid->column('associations_id', __('Associations id'));
 
         return $grid;
@@ -75,13 +77,13 @@ class EtablissementanneeSocioController extends AdminController
         $show = new Show(etablissementannee::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('existecloture', __('Existecloture'));
-        $show->field('problemeequipement', __('Problemeequipement'));
+        $show->field('filieres_id', __('Filieres id'));
+        $show->field('etablissementannees_id', __('Etablissementannees id'));
+        $show->field('nombre_stagiaire', __('Nombre stagiaire'));
+        $show->field('nombre_mis_en_stage', __('Nombre mis en stage'));
+        $show->field('taux', __('Taux'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
-        $show->field('anneescolaires_id', __('Anneescolaires id'));
-        $show->field('etablissements_id', __('Etablissements id'));
-        // $show->field('associations_id', __('Associations id'));
 
         return $show;
     }
@@ -96,9 +98,9 @@ class EtablissementanneeSocioController extends AdminController
         $form = new Form(new etablissementannee());
 
         $EtabAnnee = DB::table('etablissementannees')
-                ->where('anneescolaires_id', '=', Parametresglobaux::findOrFail(1)->anneescolaires_id)
-                ->where('etablissements_id', '=', session('etablissementchoisi'))
-                ->first();
+            ->where('anneescolaires_id', '=', Parametresglobaux::findOrFail(1)->anneescolaires_id)
+            ->where('etablissements_id', '=', session('etablissementchoisi'))
+            ->first();
 
         $form->html('
 		<style>
@@ -127,8 +129,8 @@ class EtablissementanneeSocioController extends AdminController
 }
 		</style>
 
-        <div>
-                <h1 style="text-align:center; text-transform:uppercase;">Activités Socio-Educatives</h1>
+		<div>
+                <h1 style="text-align:center; text-transform:uppercase;">Infrastructure et locaux</h1>
                 <span style="font-size: 14px;"><a href="/admin/etablissementdetails/' . session('etablissementchoisi') . '/edit">Identification</a></span>
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneefiliereenseigne/' . $EtabAnnee->id . '/edit">Filières de Formation</a></span>
@@ -140,7 +142,7 @@ class EtablissementanneeSocioController extends AdminController
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneepoint/' . $EtabAnnee->id . '/edit">Progression</a></span>
                 <span >|</span>
-                <span style="font-size: 14px";><a href="/admin/etabanneemiseenstage/' . $EtabAnnee->id . '/edit">Mise en Stage</a></span>
+                <span style="font-size: 14px";><a style="color:red !important;" href="/admin/etabanneemiseenstage/' . $EtabAnnee->id . '/edit">Mise en Stage</a></span>
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneeindicateurs/' . $EtabAnnee->id . '/edit">Indicateurs</a></span>
                 <span >|</span>
@@ -160,7 +162,7 @@ class EtablissementanneeSocioController extends AdminController
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneecomite/' . $EtabAnnee->id . '/edit">Comité gestion</a></span>
                 <span >|</span>
-                <span style="font-size: 14px";><a style="color:red !important;" href="/admin/etabanneesocio/' . $EtabAnnee->id . '/edit">Activités Socio-Educative</a></span>
+                <span style="font-size: 14px";><a href="/admin/etabanneesocio/' . $EtabAnnee->id . '/edit">Activités Socio-Educative</a></span>
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneeprobleme/' . $EtabAnnee->id . '/edit">Problèmes Urgents</a></span>
                 <span >|</span>
@@ -174,22 +176,16 @@ class EtablissementanneeSocioController extends AdminController
                 
             </div>
             ');
-            $form->html('<h3 style="text-align:center; text-transform:uppercase;">* Sport *</h3>');
-        $form->hasMany('activitesportive', __(''), function (Form\NestedForm $form) {
-            $lessports = array();
-            $sports = Sport::all();
-            foreach ($sports as $sport) {
-                $lessports[$sport->id] = $sport->libellesport;
-            }
-            $form->select('sport_id', __('Sport'))->options($lessports);
+// Ajoutez ces champs juste après le hasMany
+       
+        $form->hasMany('miseEnStages', __(''), function (Form\NestedForm $form) {
+             $form->select('filieres_id', __('Filieres id'))->options(Filiere::all()->pluck('libellefiliere', 'id'));
+            $form->number('nombre_stagiaire', __('Nombre stagiaire'));
+            $form->number('nombre_mis_en_stage', __('Nombre mis en stage'));
+            // $form->decimal('taux', __('Taux'));
+            $form->hidden('taux', __('Taux'));
         });
-        $form->html('<h3 style="text-align:center; text-transform:uppercase;">* Associations / Clubs *</h3>');
-        $form->hasMany('association', __(''), function (Form\NestedForm $form) {
-            $form->text('designation', __('Designation'));
-            $form->text('objet', __('Objet'));
-            $form->text('nomresponsable', __('Nom du responsable'));
-        });
-        $form->confirm('Vérfiez les informations');
+        
 
         $form->tools(function (Form\Tools $tools) {
 
@@ -206,17 +202,13 @@ class EtablissementanneeSocioController extends AdminController
             //$tools->add('<a class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>&nbsp;&nbsp;delete</a>');
         });
         $form->saved(function (Form $form) {
-            // $idDonneeEtab=session('idDonneesEtab');
-            // $idEtab=session('etablissementchoisi');
-            //   return redirect('admin/personnels/create');
-            //   return redirect('admin/personnels/create');
 
             $EtabAnnee = DB::table('etablissementannees')
                 ->where('anneescolaires_id', '=', Parametresglobaux::findOrFail(1)->anneescolaires_id)
                 ->where('etablissements_id', '=', session('etablissementchoisi'))
                 ->first();
 
-            return redirect('admin/etabanneeprobleme/' . $EtabAnnee->id . '/edit');
+            return redirect('admin/etabanneeindicateurs/' . $EtabAnnee->id . '/edit');
         });
         return $form;
     }

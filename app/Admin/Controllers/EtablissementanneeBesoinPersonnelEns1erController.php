@@ -11,7 +11,10 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\AdminRoleUser;
 use App\Models\Etablissement;
 use App\Models\Parametresglobaux;
+use App\Models\Discipline;
+use App\Models\Niveauenseignant;
 use Encore\Admin\Controllers\AdminController;
+
 
 class EtablissementanneeBesoinPersonnelEns1erController extends AdminController
 {
@@ -41,15 +44,16 @@ class EtablissementanneeBesoinPersonnelEns1erController extends AdminController
         }
 
         $grid->column('id', __('Id'));
-        $grid->column('etablissements.denominationetab', __('Etablissement'));
-        $grid->column('anneescolaires.annee', __('Année scolaire'));
-        $grid->column('besoin_enseignant_actuel', __('Besoin enseignant actuel'))->editable();
-        $grid->column('besoin_enseignant_futur', __('Besoin enseignant futur'))->editable();
-        $grid->column('disciplines_concernees', __('Disciplines concernées'))->editable('textarea');
-        $grid->column('qualifications_requises', __('Qualifications requises'))->editable('textarea');
-        $grid->column('motif_demande', __('Motif de la demande'))->editable('textarea');
+        $grid->column('nombre', __('Nombre'));
+        $grid->column('nombre_existant', __('Nombre existant'));
+        $grid->column('nombre_necessaire', __('Nombre nécessaire'));
+        $grid->column('disciplines_id', __('Disciplines id'));
+        $grid->column('etablissementannees_id', __('Etablissementannees id'));
+        $grid->column('niveauenseignant_id', __('Niveauenseignant id'));
+        $grid->column('observation', __('Observation'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
+        
 
         $grid->disableCreateButton();
         $grid->disableExport();
@@ -69,13 +73,12 @@ class EtablissementanneeBesoinPersonnelEns1erController extends AdminController
         $show = new Show(Etablissementannee::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('etablissements.denominationetab', __('Etablissement'));
-        $show->field('anneescolaires.annee', __('Année scolaire'));
-        $show->field('besoin_enseignant_actuel', __('Besoin enseignant actuel'));
-        $show->field('besoin_enseignant_futur', __('Besoin enseignant futur'));
-        $show->field('disciplines_concernees', __('Disciplines concernées'));
-        $show->field('qualifications_requises', __('Qualifications requises'));
-        $show->field('motif_demande', __('Motif de la demande'));
+        $show->field('nombre', __('Nombre'));
+        $show->field('nombre_existant', __('Nombre existant'));
+        $show->field('nombre_necessaire', __('Nombre nécessaire'));
+        $show->field('disciplines_id', __('Disciplines id'));
+        $show->field('niveauenseignant_id', __('Niveauenseignant id'));
+        $show->field('observation', __('Observation'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -133,11 +136,12 @@ class EtablissementanneeBesoinPersonnelEns1erController extends AdminController
             </div>
             ');
 
-        $form->number('besoin_enseignant_actuel', __('Besoin enseignant actuel'))->min(0);
-        $form->number('besoin_enseignant_futur', __('Besoin enseignant futur'))->min(0);
-        $form->textarea('disciplines_concernees', __('Disciplines concernées'))->rows(4);
-        $form->textarea('qualifications_requises', __('Qualifications requises'))->rows(4);
-        $form->textarea('motif_demande', __('Motif de la demande'))->rows(4);
+        $form->number('nombre', __('Nombre'))->min(0);
+        $form->number('nombre_existant', __('Nombre existant'))->min(0);
+        $form->number('nombre_necessaire', __('Nombre nécessaire'))->min(0);
+        $form->select('disciplines_id', __('Disciplines'))->options(Discipline::all()->pluck('libellediscipline', 'id'));
+        $form->select('niveauenseignant_id', __('Niveauenseignant'))->options(Niveauenseignant::all()->pluck('libelleniveau', 'id'));
+        $form->textarea('observation', __('Observation'))->rows(4);
 
         $form->footer(function ($footer) {
             $footer->disableReset();

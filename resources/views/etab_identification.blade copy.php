@@ -135,7 +135,7 @@
             <!-- <img src="{{ url('https://formation-professionnelle.gouv.ci/wp-content/uploads/2023/06/LOGO-SITE-02-1.png') }}" height="120"> -->
         </div>
         <br><br>
-        <div style="width: 35%; text-align: center;">
+        <!-- <div style="width: 35%; text-align: center;">
             <p style="margin-top: -40px;">----------------------</p>
             <p style="font-weight: bold; margin-bottom: -20px;">DIRECTION GENERALE
                 DE LA FORMATION INITIALE
@@ -234,17 +234,119 @@
                 <span style="font-family: Helvetica; ">1-7-1-1. {{ $etablissements->libelleenseignement }} :
                     <b> {{ $etablissements->numautorisationcreation ?? 'Non renseigné' }} </b> </span>
             </p>
+        </div> -->
+        <div style="padding:10px 30px; margin: 5px 200px;  font-weight: bold; text-align: center;">
 
-            <!-- <p style="margin-top: 8.9pt">
-                <span style="font-family: Helvetica; vertical-align: 0.5pt">1-7-1 Numéro d'autorisation d'ouverture
-                </span>
-            </p>
+            <h2 style="font-weight: bold; font-size: 40px;">DIRECTION GENERALE
+                DE LA FORMATION INITIALE
+            </h2>
+            <p style="margin-top: -25px;">----------------------</p>
+            <h2 style="font-weight: bold; font-size: 40px; color: #174e84ff; margin-top: -10px;">DIRECTION
+                DES ETABLISSEMENTS PUBLICS
+            </h2>
+        </div>
+        <br>
+
+        <div class="page">
+            <h2 style="padding:10px 30px; margin: 5px 200px;  font-weight: bold; text-align: center;">ETABLISSEMENTS :
+            </h2>
+            <h1 style="padding:10px 30px; margin: 5px 200px;  font-weight: bold; text-align: center; font-size: 80px;">
+                RAPPORT DE<br> RENTRÉE
+            </h1>
+
+            <h3 style="padding:10px 30px; margin: 5px 200px;  font-weight: bold; text-align: center; font-size: 30px;">
+                ANNÉE DE FORMATION :
+            </h3>
+            <br><br>
+            <br><br>
+
+            <div style="page-break-after: always;">
+                <h3
+                    style="padding:10px 30px; margin: 5px 200px;  font-weight: bold; text-align: center; font-size: 30px;">
+                    SOMMAIRE
+                </h3>
+
+                <p style="font-weight: bold">1. PRESENTATION DE L’ETABLISSEMENT ET DES FILIERES DE FORMATION</p>
+                <p>1.1. Présentation de l’établissement</p>
+                <p>1.2. Filières de formation</p>
+                <p>1.3. Nombre de classe par filière</p><br>
+                <p style="font-weight: bold">2. EQUIPE DE DIRECTION ET AUTRES PERSONNELS ADMINISTRATIFS</p>
+                <p>2.1. Equipe de direction</p>
+                <p>2.2. Autres personnels administratifs</p>
+                <p>2.3. Besoins en personnels administratifs et autres</p><br>
+                <p style="font-weight: bold">3. PERSONNEL ENSEIGNANT</p>
+                <p>3.1. Effectif du personnel enseignant</p>
+                <p>3.2. Conseils d’enseignement</p>
+                <p>3.3. Besoins en personnel enseignant</p><br>
+                <p style="font-weight: bold">4. APPRENANTS</p>
+                <p>4.1. Effectif des Apprenants par niveau et par classe</p>
+                <p>4.1.1. Enseignement technique</p>
+                <p>4.1.2. Formation professionnelle</p>
+                <p>4.1.3. Enseignement supérieur</p>
+                <p>4.2. Effectifs des Apprenants de 1ère année et de seconde en fonction du mode de recrutement</p>
+                <p>4.3. Statut des Apprenants par filière et par niveau</p>
+                <p>4.4. Recapitulatif général</p>
+                <p>4.5. cours du soir</p><br>
+                <p style="font-weight: bold">5. POINT DE LEXECUTION DES PROGRAMMES ET PROGRESSIONS</p><br>
+                <p style="font-weight: bold">6. INDICATEURS DE PERFORMANCE</p><br>
+                <p style="font-weight: bold">7. INFRASTRUCTURES ET LOCAUX</p>
+                <p>7.1. Bâtiments</p>
+                <p>7.2. Clôture</p>
+                <p>7.3. Problèmes liés aux infrastructures</p><br>
+
+                <p style="font-weight: bold">8. INVENTAIRE GENERAL DU MATERIEL ET DES EQUIPEMENTS</p>
+                <p>8.1. Matériels </p>
+                <p>8.2. Équipements</p><br>
+                <p style="font-weight: bold">9. GESTION FINANCIERE</p>
+                <p>9.1. État du budget</p>
+                <p>9.2. Ressources additionnelles</p><br>
+                <p style="font-weight: bold">10. COMITE DE GESTION</p><br>
+
+                <p style="font-weight: bold">11. ACTIVITES SOCIO-EDUCATIVES</p>
+                <p>11.1. Activités sportives</p>
+                <p>11.2. Clubs et associations</p><br>
+
+                <p style="font-weight: bold">12. PROBLEMES URGENTS</p><br>
+
+                <p style="font-weight: bold">13. PERSPECTIVES</p><br>
+
+                <p style="font-weight: bold">CONCLUSION</p>
+
+            </div>
+
+            <div style="page-break-after: always; padding-top: 60px;">
+                <h3
+                    style="padding:10px 30px; margin: 5px 200px;  font-weight: bold; text-align: center; font-size: 20px;">
+                    ANNEXE
+                </h3>
+                <ul style="list-style-type: disc;">
+                    <li>Listes des personnels (administratif, enseignant et autres)</li>
+                    <li>Listes des stagiaires et étudiants par classe</li>
+                    <li>Emplois du temps classe</li>
+                    <li>Emplois du temps professeurs</li>
+                    <li>Liste des Enseignants ayant des heures supplémentaires</li>
+                </ul>
+            </div>
 
 
-            <p style="margin-top: 7.15pt">
-                <span style="font-family: Helvetica; ">1-7-2-1. {{ $etablissements->libelleenseignement }} :
-                    <b> {{ $etablissements->numautorisationouverture ?? 'Non renseigné' }} </b> </span>
-            </p> -->
+        </div>
+        <div style="page-break-after: always; padding-top: 60px;">
+
+            <p style="font-weight: bold">1. PRESENTATION DE L’ETABLISSEMENT ET DES FILIERES DE FORMATION</p>
+            <h3>1.1. Présentation de l’établissement</h3>
+            <ul style="list-style-type: disc;">
+                <li>Direction Régionale : {{ $etablissements->denominationdd ?? 'Non renseigné' }} </li>
+                <li>Établissement : {{ $etablissements->denominationetab ?? 'Non renseigné' }}</li>
+                <li>Code : {{ $etablissements->code }}</li>
+                <li>Date de créarion de l'établissement : </li>
+                <li>Date d'ouverture de l'établissement : </li>
+                <li>Situation géographique : </li>
+                <li>Adresse postale :....................................................Téléphone
+                    :   {{ $etablissements->contact ?? 'Non renseigné' }}       Mobile : </li>
+                <li>Fax :.....................................Email : </li>
+
+            </ul>
+
         </div>
 
         <div>
@@ -255,10 +357,10 @@
                     <thead>
                         <tr>
                             <th style="width: 5%">N°</th>
-                            <th>Filière</th>
-                            <th>N° autorisation d'ouverture</th>
-                            <th>Durée de la formation</th>
-                            <th>Diplôme préparé</th>
+                            <th>Filière / Série</th>
+                            <th>Code</th>
+                            <th>Diplômes préparés</th>
+                            <th>Durée des études</th>
                             <th>Observations</th>
                         </tr>
                     </thead>
@@ -492,6 +594,88 @@
                     </tbody>
                 </table>
             @endif
+
+
+            <br><br>
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Les Conseils d'Enseignement (CE)</span>
+            </p>
+
+            <table border="1" cellpadding="3" cellspacing="0"
+                style="width: 100%; table-layout: fixed; text-align: center; font-size: 13px !important;">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Discipline</th>
+                        <th>Nom et prénoms du RCE</th>
+                        <th>Téléphone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if ($personnels && $personnels->count() > 0)
+                        @php
+                            $conseilsEnseignement = $personnels->filter(function($personnel) {
+                                return isset($personnel->cons_ens) && $personnel->cons_ens == 1;
+                            });
+                        @endphp
+                        
+                        @if ($conseilsEnseignement->count() > 0)
+                            @foreach ($conseilsEnseignement as $index => $conseil)
+                                <tr>
+                                    <td>{{ $index + 1 }}</td>
+                                    <td>{{ $conseil->libellediscipline ?? 'aucune' }}</td>
+                                    <td>{{ $conseil->nom . ' ' . $conseil->prenoms }}</td>
+                                    <td>{{ $conseil->telephone ?? '' }}</td>
+                                    <td>{{ $conseil->email ?? '' }}</td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <tr>
+                                <td colspan="5" style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
+                                    Aucun Conseil d'Enseignement trouvé.
+                                </td>
+                            </tr>
+                        @endif
+                    @else
+                        <tr>
+                            <td colspan="5" style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
+                                Aucune donnée disponible.
+                            </td>
+                        </tr>
+                    @endif
+                </tbody>
+            </table>
+            <br><br>
+
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Besoin en personnel enseignant</span>
+            </p>
+
+
+            <table border="1" cellpadding="8" cellspacing="0"
+                style="width: 100%; table-layout: fixed; font-size: 14px !important; text-align: center">
+                <thead>
+                    <tr>
+                        <th style="width: 3%;">N°</th>
+                        <th>Niveau de l'enseignant</th>
+                        <th>Discipline</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    <tr>
+                        <td style="height: 35px;"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
 
             <br><br>
             <p>
@@ -736,6 +920,421 @@
             </table>
 
             <br><br>
+
+             <br><br>
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Cours du soir</span>
+            </p>
+
+            <table border="1" cellpadding="3" cellspacing="0"
+                style="width: 100%; table-layout: fixed; text-align: center; font-size: 13px !important;">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Filière</th>
+                        <th rowspan="2">Diplôme</th>
+                        <th rowspan="2">Niveau</th> <!-- Fusionner les cellules pour "Nombre" -->
+                        <th colspan="3">Effectif</th>
+                        <th rowspan="2">Total général</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>F</td>
+                        <td>G</td>
+                        <td>T</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2">BTS</td>
+                        <td>1ere année</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2eme année</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3">BAC</td>
+                        <td>Seconde</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td rowspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Première</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Terminale</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3">BT</td>
+                        <td>1A</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td rowspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2A</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3A</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3">CAP</td>
+                        <td>1A</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td rowspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2A</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3A</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">TOTAL</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <br><br>
+
+
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Point de l'exécution des programmes et
+                    progressions</span>
+            </p>
+
+            <table border="1" cellpadding="3" cellspacing="0"
+                style="width: 100%; table-layout: fixed; text-align: center; font-size: 13px !important;">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Discipline</th>
+                        <th>Nbre total de chapitres</th>
+                        <th>Nbre de chapitres exécutés</th>
+                        <th>% Chapitres exécutés</th>
+                        <th>Nbre total de leçons</th>
+                        <th>Nbre de leçons exécutées</th>
+                        <th>% Leçons exécutées</th>
+                        <th>Observations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if ($pointexecutions && $pointexecutions->count() > 0)
+                        @foreach ($pointexecutions as $pointexecution)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $pointexecution->libellediscipline ?? '' }}</td>
+                                <td>{{ $pointexecution->total_chapitre ?? '' }}</td>
+                                <td>{{ $pointexecution->chapitres_execute ?? '' }}</td>
+                                <td>{{ $pointexecution->pourcentage_chapitre ? number_format($pointexecution->pourcentage_chapitre, 2) . '%' : '' }}</td>
+                                <td>{{ $pointexecution->total_lecon ?? '' }}</td>
+                                <td>{{ $pointexecution->lecons_execute ?? '' }}</td>
+                                <td>{{ $pointexecution->pourcentage_lecon ? number_format($pointexecution->pourcentage_lecon, 2) . '%' : '' }}</td>
+                                <td>{{ $pointexecution->observations ?? '' }}</td>
+                            </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="9" style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">Aucune donnée existante.</td>
+                        </tr>
+                    @endif
+                </tbody>
+            </table>
+            <br><br>
+
+
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Indicateurs de performances</span>
+            </p>
+
+            <table border="1" cellpadding="3" cellspacing="0"
+                style="width: 100%; table-layout: fixed; text-align: center; font-size: 13px !important;">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Indicateurs-clés de performance</th>
+                        <th>Taux obtenu en 2024-2025</th>
+                        <th>La cible en 2025-2026</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if ($indicateurs && $indicateurs->count() > 0)
+                        @foreach ($indicateurs as $indicateur)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $indicateur->libelleitems ?? '' }}</td>
+                                <td>{{ $indicateur->tauxobtenu_n1 ?? '' }}</td>
+                                <td>{{ $indicateur->tauxcible ?? '' }}</td>
+                            </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="4" style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">Aucune donnée existante.</td>
+                        </tr>
+                    @endif
+                </tbody>
+            </table>
+
+
+            <br><br>
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Etat d'exécution du budget</span>
+            </p>
+
+            <table border="1" cellpadding="3" cellspacing="0"
+                style="width: 100%; table-layout: fixed; text-align: center; font-size: 13px !important;">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Ligne budgétaire</th>
+                        <th>Désignation</th>
+                        <th>Montant </th>
+                        <th>Engagement réalisé</th>
+                        <th>Solde</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if ($executionbudgets && $executionbudgets->count() > 0)
+                        @php
+                            $totalDotation = 0;
+                            $totalEngagement = 0;
+                            $totalSolde = 0;
+                        @endphp
+                        @foreach ($executionbudgets as $executionbudget)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $executionbudget->ligne_budgetaire ?? '' }}</td>
+                                <td>{{ $executionbudget->designation ?? '' }}</td>
+                                <td>{{ number_format($executionbudget->dotation ?? 0, 0, ',', ' ') }}</td>
+                                <td>{{ number_format($executionbudget->engagement ?? 0, 0, ',', ' ') }}</td>
+                                <td>{{ number_format($executionbudget->solde ?? 0, 0, ',', ' ') }}</td>
+                            </tr>
+                            @php 
+                                $totalDotation += $executionbudget->dotation ?? 0; 
+                                $totalEngagement += $executionbudget->engagement ?? 0; 
+                                $totalSolde += $executionbudget->solde ?? 0; 
+                            @endphp
+                        @endforeach
+                        <tr>
+                            <td colspan="3">TOTAL DOTATION BUDGETAIRE</td>
+                            <td>{{ number_format($totalDotation, 0, ',', ' ') }}</td>
+                            <td>{{ number_format($totalEngagement, 0, ',', ' ') }}</td>
+                            <td>{{ number_format($totalSolde, 0, ',', ' ') }}</td>
+                        </tr>
+                    @else
+                        <tr>
+                            <td colspan="6" style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">Aucune donnée existante.</td>
+                        </tr>
+                    @endif
+                </tbody>
+            </table>
+
+
+            <br><br>
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Ressources additionnelles</span>
+            </p>
+
+            @if ($ressourcesadditionnelles && $ressourcesadditionnelles->count() > 0)
+                @foreach ($ressourcesadditionnelles as $ressource)
+                    <p style="margin-bottom: 5px;">
+                        <strong>Banque :</strong> {{ $ressource->banque ?? '' }}<br>
+                        <strong>Numéro de compte :</strong> {{ $ressource->numero_compte ?? '' }}
+                    </p>
+                @endforeach
+            @else
+                <p style="color: #ed7d31; font-weight: bold; font-style: italic;">Aucune ressource additionnelle enregistrée.</p>
+            @endif
+
+            <br><br>
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Frais d’inscription et de scolarité (cours du
+                    soir)</span>
+            </p>
+
+            <table border="1" cellpadding="3" cellspacing="0"
+                style="width: 100%; table-layout: fixed; text-align: center; font-size: 13px !important;">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Nature</th>
+                        <th>Nombre d'élèves</th>
+                        <th>Total perçus </th>
+                        <th>Part établissement</th>
+                        <th>Part fonds école</th>
+                        <th>Observations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if ($fraisscolarites && $fraisscolarites->count() > 0)
+                        @php 
+                            $totalEleves = 0; 
+                            $totalPerçu = 0; 
+                            $totalEtab = 0; 
+                            $totalFonds = 0; 
+                        @endphp
+                        @foreach ($fraisscolarites as $fraisscolarite)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $fraisscolarite->nature ?? '' }}</td>
+                                <td>{{ $fraisscolarite->nombre_eleve ?? '' }}</td>
+                                <td>{{ number_format($fraisscolarite->total_percus ?? 0, 0, ',', ' ') }}</td>
+                                <td>{{ number_format($fraisscolarite->part_etab ?? 0, 0, ',', ' ') }}</td>
+                                <td>{{ number_format($fraisscolarite->part_fonds ?? 0, 0, ',', ' ') }}</td>
+                                <td>{{ $fraisscolarite->observations ?? '' }}</td>
+                            </tr>
+                            @php 
+                                $totalEleves += $fraisscolarite->nombre_eleve ?? 0; 
+                                $totalPerçu += $fraisscolarite->total_percus ?? 0; 
+                                $totalEtab += $fraisscolarite->part_etab ?? 0; 
+                                $totalFonds += $fraisscolarite->part_fonds ?? 0; 
+                            @endphp
+                        @endforeach
+                        <tr>
+                            <td colspan="2">TOTAL</td>
+                            <td>{{ $totalEleves }}</td>
+                            <td>{{ number_format($totalPerçu, 0, ',', ' ') }}</td>
+                            <td>{{ number_format($totalEtab, 0, ',', ' ') }}</td>
+                            <td>{{ number_format($totalFonds, 0, ',', ' ') }}</td>
+                            <td></td>
+                        </tr>
+                    @else
+                        <tr>
+                            <td colspan="7" style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">Aucune donnée existante.</td>
+                        </tr>
+                    @endif
+                </tbody>
+            </table>
+            <br><br>
+
+
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Autres ressources (productions et travaux
+                    extérieurs)</span>
+            </p>
+
+            <table border="1" cellpadding="3" cellspacing="0"
+                style="width: 100%; table-layout: fixed; text-align: center; font-size: 13px !important;">
+                <thead>
+                    <tr>
+                        <th>Nature</th>
+                        <th>Clients</th>
+                        <th>Montant prévisionnels</th>
+                        <th>Part établissement</th>
+                        <th>Part versée au fond école</th>
+                        <th>Observations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if ($travauxexterieurs && $travauxexterieurs->count() > 0)
+                        @php 
+                            $totalMontant = 0; 
+                            $totalEtab = 0; 
+                            $totalFonds = 0; 
+                        @endphp
+                        @foreach ($travauxexterieurs as $travauxexterieur)
+                            <tr>
+                                <td>{{ $travauxexterieur->nature ?? '' }}</td>
+                                <td>{{ $travauxexterieur->client ?? '' }}</td>
+                                <td>{{ number_format($travauxexterieur->montant_previsionnel ?? 0, 0, ',', ' ') }}</td>
+                                <td>{{ number_format($travauxexterieur->part_etab ?? 0, 0, ',', ' ') }}</td>
+                                <td>{{ number_format($travauxexterieur->part_fonds ?? 0, 0, ',', ' ') }}</td>
+                                <td>{{ $travauxexterieur->observations ?? '' }}</td>
+                            </tr>
+                            @php 
+                                $totalMontant += $travauxexterieur->montant_previsionnel ?? 0; 
+                                $totalEtab += $travauxexterieur->part_etab ?? 0; 
+                                $totalFonds += $travauxexterieur->part_fonds ?? 0; 
+                            @endphp
+                        @endforeach
+                        <tr>
+                            <td>TOTAL</td>
+                            <td></td>
+                            <td>{{ number_format($totalMontant, 0, ',', ' ') }}</td>
+                            <td>{{ number_format($totalEtab, 0, ',', ' ') }}</td>
+                            <td>{{ number_format($totalFonds, 0, ',', ' ') }}</td>
+                            <td></td>
+                        </tr>
+                    @else
+                        <tr>
+                            <td colspan="6" style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">Aucune donnée existante.</td>
+                        </tr>
+                    @endif
+                </tbody>
+            </table>
+            <br><br>
+
+            <p>
+                <span style="font-family: Helvetica; font-weight: bold">Comité de gestion</span>
+            </p>
+            <p style="text-decoration:underline; font-weight: bold">Bureau</p>
+            @if ($comitegestions && $comitegestions->count() > 0)
+                @foreach ($comitegestions as $comitegestion)
+                    @if ($comitegestion->libellemembrecomite)
+                        <p style="font-weight: bold">{{ $comitegestion->libellemembrecomite }} :</p>
+                        <p>{{ $comitegestion->nomprenoms ?? '' }}</p>
+                    @endif
+                @endforeach
+            @else
+                <p style="font-weight: bold">Président :</p>
+                <p style="font-weight: bold">Vice-Président :</p>
+                <p style="font-weight: bold">Secrétaire Général :</p>
+                <p style="font-weight: bold">Secrétaire Général Adjoint :</p>
+                <p style="font-weight: bold">Trésorier Général :</p>
+                <p style="font-weight: bold">Trésorier Général Adjoint :</p>
+            @endif
+            <br><br>
+
+
             <p>
                 <span style="font-family: Helvetica; font-weight: bold">Les classes</span>
             </p>

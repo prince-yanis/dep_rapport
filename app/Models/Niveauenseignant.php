@@ -26,4 +26,9 @@ class Niveauenseignant extends Model
 	protected $fillable = [
 		'libelleniveau'
 	];
+	
+	public function besoinpersonnelens()
+	{
+		return $this->hasMany(Besoinpersonnelen::class, 'niveauenseignant_id');
+	}
 }

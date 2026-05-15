@@ -104,26 +104,30 @@ class EtablissementanneeExecutionProgramme1erController extends AdminController
 		</style>
 
 		<div>
-                <h1 style="text-align:center; text-transform:uppercase;">Exécution du Programme</h1>
+                <h1 style="text-align:center; text-transform:uppercase;">Identification</h1>
                 <span style="font-size: 14px;"><a href="/admin/etablissementdetails1er/' . session('etablissementchoisi') . '/edit">Identification</a></span>
+                <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneefiliereenseigne1er/'. $EtabAnnee->id .'/edit">Filières de Formation</a></span>
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneepersonnel1er">Personnels</a></span>
                 <span >|</span>
+                <span style="font-size: 14px";><a style="color:red !important;" href="/admin/etabanneeexecutionprogramme1er/'. $EtabAnnee->id .'/edit">Exécution Programme</a></span>
+                <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneeinfrastructure1er/'. $EtabAnnee->id .'/edit">Infrastructure et Locaux</a></span>
+                <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneeinventaire1er/'. $EtabAnnee->id .'/edit">Equipement</a></span>
+                <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneebesoinpersonnelens1er/'. $EtabAnnee->id .'/edit">Besoin en Personnels Enseignants</a></span>
+                <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneebesoinformation1er/'. $EtabAnnee->id .'/edit">Besoin en Formation</a></span>
+                <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneeprobleme1er/'. $EtabAnnee->id .'/edit">Problèmes Urgents</a></span>
+                <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneeconclusion1er/'. $EtabAnnee->id .'/edit">Conclusion</a></span>
+                <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/plannings2">Planning</a></span>
+                <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneeapprenant1er">Apprenants</a></span>
-                <span >|</span>
-                <span style="font-size: 14px";><a style="color:red !important;" href="/admin/etabanneeexecutionprogramme1er/' . $EtabAnnee->id . '/edit">Exécution Programme</a></span>
-                <span >|</span>
-                <span style="font-size: 14px";><a href="/admin/etabanneebesoinpersonnelens1er/' . $EtabAnnee->id . '/edit">Besoin en Personnels Enseignants</a></span>
-                <span >|</span>
-                <span style="font-size: 14px";><a href="/admin/etabanneeresultatscolaire1er/' . $EtabAnnee->id . '/edit">Résultats Scolaires</a></span>
-                <span >|</span>
-                <span style="font-size: 14px";><a href="/admin/etabanneeinfrastructure1er/' . $EtabAnnee->id . '/edit">Infrastructure et Locaux</a></span>
-                <span >|</span>
-                <span style="font-size: 14px";><a href="/admin/etabanneeinventaire1er/' . $EtabAnnee->id . '/edit">Equipement</a></span>
-                <span >|</span>
-                <span style="font-size: 14px";><a href="/admin/etabanneeprobleme1er/' . $EtabAnnee->id . '/edit">Problèmes Urgents</a></span>
-                <span >|</span>
-                <span style="font-size: 14px";><a href="/admin/etabanneeconclusion1er/' . $EtabAnnee->id . '/edit">Conclusion</a></span>
             </div>
             ');
 

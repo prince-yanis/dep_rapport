@@ -26,4 +26,9 @@ class Discipline extends Model
 	protected $fillable = [
 		'libellediscipline'
 	];
+	
+	public function besoinpersonnelens()
+	{
+		return $this->hasMany(Besoinpersonnelen::class, 'disciplines_id');
+	}
 }

@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Designationinfrastructure;
 use Encore\Admin\Controllers\AdminController;
 
-class EtablissementanneeBesoinPersonnelAdminController extends AdminController
+class EtablissementanneeBesoinPersonnelAdmin2emeController extends AdminController
 {
     /**
      * Title for current resource.
@@ -128,14 +128,14 @@ class EtablissementanneeBesoinPersonnelAdminController extends AdminController
 		</style>
 
         <div>
-        <h1 style="text-align:center; text-transform:uppercase;">Besoin en Personnel Administratif</h1>
+        <h1 style="text-align:center; text-transform:uppercase;">Personnels</h1>
         <span style="font-size: 14px;"><a href="/admin/etablissementdetails2eme/' . session('etablissementchoisi') . '/edit">Identification</a></span>
         <span >|</span>
-        <span style="font-size: 14px";><a href="/admin/etabanneefiliereenseigne2eme/'. $EtabAnnee->id . '/edit">Filières de Formation</a></span>
+        <span style="font-size: 14px";><a href="/admin/etabanneefiliereenseigne2eme/' . $EtabAnnee->id . '/edit">Filières de Formation</a></span>
         <span >|</span>
-        <span style="font-size: 14px";><a href="/admin/etabanneepersonnel2eme">Personnels</a></span>
+        <span style="font-size: 14px";><a href="/admin/etabanneepersonnel2eme/' . $EtabAnnee->id . '/edit">Personnels</a></span>
         <span >|</span>
-        <span style="font-size: 14px";><a style="color:red !important;" href="/admin/etabanneebesoinpersonneladmin/'. $EtabAnnee->id . '/edit">Besoin en Personnel Administratif</a></span>
+        <span style="font-size: 14px";><a style="color:red !important;" href="/admin/etabanneebesoinpersonneladmin2eme/' . $EtabAnnee->id . '/edit">Besoin en Personnel Administratif</a></span>
         <span >|</span>
         <span style="font-size: 14px";><a href="/admin/etabanneebesoinpersonnelens/' . $EtabAnnee->id . '/edit">Besoin en Personnel Enseignant</a></span>
         <span >|</span>
@@ -147,15 +147,13 @@ class EtablissementanneeBesoinPersonnelAdminController extends AdminController
         <span >|</span>
         <span style="font-size: 14px";><a href="/admin/etabanneeactivitesextrascolaire/'. $EtabAnnee->id .'/edit">Infrastructure et Locaux</a></span>
         <span >|</span>
-        <span style="font-size: 14px";><a href="/admin/etabanneebesoinmateriel/'. $EtabAnnee->id .'/edit">Besoin en Matériels et Divers</a></span>
+        <span style="font-size: 14px";><a href="/admin/etabanneebesoinmateriel/' . $EtabAnnee->id . '/edit">Besoin en Matériels et Divers</a></span>
         <span >|</span>
         <span style="font-size: 14px";><a href="/admin/etabanneeprevision2eme/' . $EtabAnnee->id . '/edit">Prévision</a></span>
         <span >|</span>
-        <span style="font-size: 14px";><a href="/admin/etabanneeetat2eme/'. $EtabAnnee->id .'/edit">Etat des difficultés gestion et suggestion</a></span>
+        <span style="font-size: 14px";><a href="/admin/etabanneeetat2eme/' . $EtabAnnee->id . '/edit">Etat des difficultés gestion et suggestion</a></span>
         <span >|</span>
-        <span style="font-size: 14px";><a href="/admin/etabanneeconclusion2eme/'. $EtabAnnee->id .'/edit">Conclusion</a></span>
-		<span >|</span>
-        <span style="font-size: 14px";><a href="/admin/apprenantannees_2eme">Apprenants</a></span>
+        <span style="font-size: 14px";><a href="/admin/etabanneeconclusion2eme/' . $EtabAnnee->id . '/edit">Conclusion</a></span>
     </div>
             ');
 

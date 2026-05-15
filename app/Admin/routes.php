@@ -128,6 +128,8 @@ Route::group([
     $router->resource('besoin-urgents', BesoinUrgentController::class);
     $router->resource('itemsindicateurs', ItemsindicateurController::class);
     $router->resource('amenagements', AmenagementController::class);
+    $router->resource('etabanneemiseenstage', EtablissementanneeMiseEnStageController::class);
+    
 
     //1er Semestre
     $router->resource('etablissements1er', Etablissement1erSemestreController::class);    
@@ -147,7 +149,9 @@ Route::group([
     $router->resource('etabanneebesoinpersonnelens1er', EtablissementanneeBesoinPersonnelEns1erController::class);
     $router->resource('etabanneeresultatscolaire1er', EtablissementanneeResultatScolaire1erController::class);
     $router->resource('apprenantannees_1er', Apprenantannee_1erController::class);
-    $router->resource('etabanneepoint', EtablissementanneePointExecution1erController::class);
+    $router->resource('etabanneepoint1er', EtablissementanneePointExecution1erController::class);
+    $router->resource('etabanneebesoinpersonneladmin1er', EtablissementanneeBesoinPersonnelAdmin1erController::class);
+
 
 
 
@@ -167,6 +171,8 @@ Route::group([
     $router->resource('etabanneeetat2eme', EtablissementanneeEtat2emeController::class);
     $router->resource('apprenantannees_2eme', Apprenantannee_2emeController::class);
     $router->resource('etabanneepoint2eme', EtablissementanneePointExecution2emeController::class);
+    $router->resource('etabanneeactivitesextrascolaire', EtablissementanneeActivitesextrascolaireController::class);
+    
 
 
 
@@ -334,6 +340,17 @@ Route::group([
     $router->resource('frais-scolarites', FraisScolariteController::class);
     $router->resource('besoin-urgents', BesoinUrgentController::class);
 
+    // Module de suivi des stages
+    $router->resource('entreprises', EntrepriseController::class);
+    $router->resource('stages', StageController::class);
+    $router->resource('suivistages', SuivistageController::class);
+    $router->resource('conventions', ConventionController::class);
+    
+    // Route pour l'export Excel personnalisé
+    $router->get('excel/export/{resource}', 'ExcelExportController@export')->name('excel.export');
+
+    $router->resource('mise-en-stages', MiseEnStageController::class);
+    $router->resource('activitesextrascolaires', ActivitesextrascolaireController::class);
 
 
 });

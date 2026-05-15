@@ -3,980 +3,844 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta name="generator" content="Aspose.Words for .NET 24.8.0" />
     <title></title>
 
     <style type="text/css">
+        body { font-family: Helvetica, Arial, sans-serif; font-size: 12px; }
+
+        h2 { font-size: 15px; font-weight: bold; text-align: center; text-decoration: underline; margin-top: 20px; }
+        h3 { font-size: 13px; font-weight: bold; }
+
         th {
             background-color: #0856ba;
             text-align: center;
-            font-size: 12px !important;
+            font-size: 11px;
             color: #fff;
+            padding: 5px 4px;
         }
-
         td {
             word-wrap: break-word;
-            /* Permet de couper les mots trop longs */
             overflow-wrap: break-word;
-            /* Alternative pour certains navigateurs */
             white-space: normal;
-            /* Permet le retour à la ligne si nécessaire */
+            font-size: 11px;
+            padding: 4px;
         }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 10px; }
 
-        .page {
-            page-break-after: always;
-        }
+        .page { page-break-after: always; }
+        .page-break { page-break-before: always; }
 
-        .page-break {
-            page-break-before: always;
-            /* Saut de page avant */
-            page-break-after: always;
-            /* Saut de page après */
-            text-align: center;
-            font-size: 24px;
+        .section-title {
             font-weight: bold;
+            font-size: 13px;
+            margin-top: 14px;
+            margin-bottom: 4px;
         }
+        .no-data {
+            color: #ed7d31;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+        }
+        .entete-left  { width: 35%; float: left; }
+        .entete-right { width: 65%; float: right; text-align: center; }
+        .clearfix::after { content: ""; display: table; clear: both; }
     </style>
 </head>
 
 <body>
-    <div>
-        <div style="width: 100%; text-align: center;">
-            <img src="https://formation-professionnelle.gouv.ci/wp-content/uploads/2023/06/LOGO-SITE-02-1.png"
-                height="170">
-            <!-- <img src="{{ url('https://formation-professionnelle.gouv.ci/wp-content/uploads/2023/06/LOGO-SITE-02-1.png') }}" height="120"> -->
+
+{{-- ================================================================
+     PAGE 1 — EN-TETE + IDENTIFICATION
+     ================================================================ --}}
+<div class="page">
+
+    {{-- En-tête --}}
+    <div class="clearfix" style="margin-bottom: 20px;">
+        <div class="entete-left">
+            <p style="margin:0; font-weight:bold;">DIRECTION GENERALE<br>DE LA FORMATION INITIALE</p>
+            <p style="margin:4px 0;">-------------------</p>
+            <p style="margin:0; font-weight:bold;">DIRECTION<br>DES ETABLISSEMENTS PUBLICS</p>
+            <p style="margin:4px 0;">-------------------</p>
         </div>
-        <br><br>
-        <div style="width: 35%; text-align: center;">
-            <p style="margin-top: -40px;">----------------------</p>
-            <p style="font-weight: bold; margin-bottom: -20px;">DIRECTION GENERALE
-                DE LA FORMATION INITIALE
-            <p>
-            <p style="margin-top: -10px;">----------------------</p>
-            <p style="font-weight: bold; margin-top: -20px;">DIRECTION DE L’ENCADREMENT
-                DES ETABLISSEMENTS PRIVES
-            </p>
-            <p style="margin-top: -20px;">----------------------</p>
+        <div class="entete-right">
+            <img src="https://formation-professionnelle.gouv.ci/wp-content/uploads/2023/06/LOGO-SITE-02-1.png" height="110">
         </div>
-        <br><br>
-        <div>
-            <div class="page">
-                <h3
-                    style="padding:10px 30px; margin: 5px 200px; border: 2px solid black; font-weight: bold; text-align: center;">
-                    RAPPORT DU 2EME SEMESTRE DES ETABLISSEMENTS SCOLAIRES PRIVES </h3>
-
-                <h3 style="font-weight: bold; text-align: center; margin-top: 50px; text-decoration: underline;">
-                    I-IDENTIFICATION
-                </h3>
-                <br>
-
-                <p style="margin-top: 7.1pt;font-family: Helvetica; font-weight: bold">I-1. Dénomination de
-                    l'établissement
-                    (en
-                    entier et en lettres capitales) </p>
-                <p style="margin-top: 8.65pt">
-                    <span style="font-family: Helvetica; letter-spacing: -0.1pt">
-                        <b>{{ $etablissements->denominationetab ?? 'Non renseigné' }}</b> &nbsp; &nbsp; &nbsp; Sigle:
-                        {{ $etablissements->sigle ?? 'Non renseigné' }}
-                    </span>
-                </p>
-
-                <p style="margin-top: 7.1pt;font-family: Helvetica; font-weight: bold">I-2. Contacts de l'établissement
-                </p>
-                <br>
-
-                <p class="ListParagraph" style="margin-top: 1.8pt; font-family: Helvetica">
-                    <span style="font-family: Helvetica">Téléphone de l'établissement Cel :
-                        <b>{{ $etablissements->contact ?? 'Non renseigné' }}</b></span>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span style="font-family: Helvetica">Fixe : </span>
-                </p>
-
-                <p class="ListParagraph" style="margin-top: 4pt; font-family: Helvetica">
-                    <span style="font-family: Helvetica">Nom et Prénoms du Fondateur:
-                        <b>{{ $etablissements->nomfondateur ?? 'Non renseigné' }}</b>
-                </p>
-
-                <br>
-
-                <p style="margin-top: 8.65pt;font-family: Helvetica; letter-spacing: -0.1pt;">
-                    I-3. Ordre d'enseignement de l'établissement:
-                    <span style="font-family: Helvetica; letter-spacing: -0.1pt; font-weight: normal !important;">
-                        <b>{{ $etablissements->libelleenseignement }}</b></span>
-
-                </p>
-
-                <p style="margin-top: 8.65pt; font-family: Helvetica;">
-                    I-4. Code de L'établissement :
-                    <span style="font-family: Helvetica; letter-spacing: -0.1pt">
-                        <b>{{ $etablissements->code }}</b></span>
-                    &nbsp;
-                </p>
-                <br>
-                <br>
-                <p style="margin-top: 5.25pt">
-                    <span style="font-family: Helvetica; font-weight: bold">I-6. Localisation</span>
-                </p>
-                <p style="margin-top: 8pt">
-                    <span style="font-family: Helvetica">I-6-1. Direction régionale :
-                        <b>{{ $etablissements->denominationdd ?? 'Non renseigné' }} </b></span>
-                </p>
-
-                <p style="margin-top: 6.75pt">
-                    <span style="font-family: Helvetica; letter-spacing: -0.1pt">I-6-1. Commune:
-                        <b>{{ $etablissements->denominationcommune ?? 'Non renseigné' }}</b>. &nbsp; &nbsp;&nbsp; &nbsp;
-                </p>
-                <p style="margin-top: 6.75pt">
-                    <span style="font-family: Helvetica; letter-spacing: -0.1pt">I-6-2. Quartier :
-                        <b> {{ $etablissements->localisation ?? 'Non renseigné' }} </b></span>
-                </p>
-
-                <p style="margin-top: 6.1pt">
-                    <span style="font-family: Helvetica; vertical-align: 0.5pt">1-6-3. GPS (Coordonnées) :
-                        <b> {{ $etablissements->latitude ?? 'Pas' }} ,
-                            {{ $etablissements->longitude ?? 'indiqué' }}</b></span>
-                </p>
-
-                <br>
-                <p style="margin-top: 8.9pt">
-                    <span style="font-family: Helvetica;  font-weight: bold; vertical-align: 0.5pt; ">1-7 Numéros
-                        d'identification</span>
-                </p>
-                <p style="margin-top: 8.9pt">
-                    <span style="font-family: Helvetica; vertical-align: 0.5pt">1-7-1 Numéro d'autorisation de création
-                    </span>
-                </p>
-                <p style="margin-top: 7.15pt">
-                    <span style="font-family: Helvetica; ">1-7-1-1. {{ $etablissements->libelleenseignement }} :
-                        <b> {{ $etablissements->numautorisationcreation ?? 'Non renseigné' }} </b> </span>
-                </p>
-
-                <p style="margin-top: 8.9pt">
-                    <span style="font-family: Helvetica; vertical-align: 0.5pt">1-7-1 Numéro d'autorisation d'ouverture
-                    </span>
-                </p>
-
-
-                <p style="margin-top: 7.15pt">
-                    <span style="font-family: Helvetica; ">1-7-2-1. {{ $etablissements->libelleenseignement }} :
-                        <b> {{ $etablissements->numautorisationouverture ?? 'Non renseigné' }} </b> </span>
-                </p>
-            </div>
-
-            <div>
-                <h3>Filières enseignées</h3>
-
-                @if ($nbre_filiere_enseignes > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; text-align: center; font-size: 13px !important;">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">N°</th>
-                            <th>Filière</th>
-                            <th>N° autorisation d'ouverture</th>
-                            <th>Durée de la formation</th>
-                            <th>Diplôme préparé</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($filiere_enseignes as $filiere_enseigne)
-                        <tr>
-                            <td>{{ $loop->iteration ?? '' }}</td>
-                            <td>{{ $filiere_enseigne->libellefiliere ?? '' }}</td>
-                            <td>{{ $filiere_enseigne->filnumaut ?? '' }}</td>
-                            <td>{{ $filiere_enseigne->dureeformation ?? '' }}</td>
-                            <td>{{ $filiere_enseigne->libellediplome ?? '' }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; text-align: center">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">N°</th>
-                            <th>Filière</th>
-                            <th>N° autorisation d'ouverture</th>
-                            <th>Durée de la formation</th>
-                            <th>Diplôme préparé</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="5" style="color: #ed7d31; font-weight: bold; font-style: italic">Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Les personnels</span>
-                </p>
-
-
-                @if ($nbre_personnels > 0)
-                <table border="1" cellpadding="3" cellspacing="0"
-                style="width: 100%; table-layout: fixed; text-align: center; font-size: 13px !important;">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">N°</th>
-                            <th>Nom & Prénoms</th>
-                            <th style="width: 5%">Matricule</th>
-                            <th style="width: 5%">Sexe</th>
-                            <th>Type de personnel</th>
-                            <th style="width: 8%">Date de naissance</th>
-                            <th>Lieu de naissance</th>
-                            <th>Email</th>
-                            <th>Contact</th>
-                            <th>Diplome</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($personnels as $personnel)
-                        <tr style="text-align: center">
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $personnel->nom . ' ' . $personnel->prenoms ?? '' }}</td>
-                            <td>{{ $personnel->matricule ?? '' }}</td>
-                            <td>{{ $personnel->sexe ?? '' }}</td>
-                            <td>{{ $personnel->libelletypepersonnel ?? '' }}</td>
-                            <td>{{ $personnel->datenaissance ?? '' }}</td>
-                            <td>{{ $personnel->lieunaissance ?? '' }}</td>
-                            <td>{{ $personnel->pemail ?? '' }}</td>
-                            <td>{{ $personnel->tel ?? '' }}</td>
-                            <td>{{ $personnel->libellediplome ?? '' }}</td>
-                            {{-- <td></td>
-                    <td></td> --}}
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; text-align: center">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">N°</th>
-                            <th>Nom & Prénoms</th>
-                            <th>Matricule</th>
-                            <th>Sexe</th>
-                            <th>Type de personnel</th>
-                            <th>Date de naissance</th>
-                            <th>Lieu de naissance</th>
-                            <th>Email</th>
-                            <th>Contact</th>
-                            <th>Diplome</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="10"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Besoin en personnel administratif</span>
-                </p>
-
-                @if ($nbre_besoinpersonnel_admins > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; font-size: 14px !important; text-align: center">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Fonction</th>
-                            <th>Type de personnel</th>
-                            <th>Nombre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach ($besoinpersonnel_admins as $besoinpersonnel_admin)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $besoinpersonnel_admin->libellefonction ?? 'Non renseigné' }}</td>
-                            <td>{{ $besoinpersonnel_admin->libelletypepersonnel ?? 'Non renseigné' }}</td>
-                            <td>{{ $besoinpersonnel_admin->nombre ?? 'Non renseigné' }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Nombre</th>
-                            <th>Fonction</th>
-                            <th>Type de personnel</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="4"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-
-                <br><br>
-
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Besoin en personnel enseignant</span>
-                </p>
-
-                @if ($nbre_besoinpersonnelens > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; font-size: 14px !important; text-align: center">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Niveau de l'enseignant</th>
-                            <th>Discipline</th>
-                            <th>Nombre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach ($besoinpersonnelens as $besoinpersonnelen)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $besoinpersonnelen->libelleniveau ?? 'Non renseigné' }}</td>
-                            <td>{{ $besoinpersonnelen->libellediscipline ?? 'Non renseigné' }}</td>
-                            <td>{{ $besoinpersonnelen->nombre ?? 'Non renseigné' }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Niveau</th>
-                            <th>Type de personnel</th>
-                            <th>Nombre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="4"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Les classes</span>
-                </p>
-
-                @if ($nbre_classes > 0)
-                <table border="1" cellpadding="5" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; font-size: 13px !important;">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">N°</th>
-                            <th>Dénomination</th>
-                            <th style="width: 15%">Effectif total</th>
-                            <th style="width: 7%">Garçons</th>
-                            <th style="width: 7%">Filles</th>
-                            <th style="width: 7%">Boursiers</th>
-                            <th style="width: 7%">Non boursiers</th>
-                            <th style="width: 7%">Affectés</th>
-                            <th style="width: 7%">Non affectés</th>
-                            <th>Groupe pédagogique</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach ($boursiers as $boursier)
-                        <tr style="text-align: center">
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $boursier->denominationclasse ?? '' }}</td>
-                            <td>{{ $boursier->effectif_total ?? '' }}</td>
-                            <td>{{ $boursier->effectif_gar ?? '' }}</td>
-                            <td>{{ $boursier->effectif_fil ?? '' }}</td>
-                            <td>{{ $boursier->nombre_boursiers ?? '' }}</td>
-                            <td>{{ $boursier->nombre_non_boursiers ?? '' }}</td>
-                            <td>{{ $boursier->nombre_affectes ?? '' }}</td>
-                            <td>{{ $boursier->nombre_non_affectes ?? '' }}</td>
-                            <td>{{ $boursier->libellegp ?? '' }}</td>
-                        </tr>
-                        @endforeach
-
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th>N°</th>
-                            <th>Dénomination</th>
-                            <th>Effectif total</th>
-                            <th>Garçons</th>
-                            <th>Filles</th>
-                            <th>Boursiers</th>
-                            <th>Non boursiers</th>
-                            <th>Affectés</th>
-                            <th>Non affectés</th>
-                            <th>Groupe pédagogique</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="10"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Les apprenants</span>
-                </p>
-
-                @if ($nbre_apprenants > 0)
-                <table border="1" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; font-size: 11px !important;">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">N°</th>
-                            <th style="width: 9%">Matricule</th>
-                            <th>Nom & Prénoms</th>
-                            <th style="width: 8%">Date de naissance</th>
-                            <th>Lieu de naissance</th>
-                            <th style="width: 5%">Sexe</th>
-                            <th>Nationalité</th>
-                            <th>Classe</th>
-                            <th>Handicap</th>
-                            <th>Moyenne 2eme semestre</th>
-                            <th>Moyenne annuelle</th>
-                            <th>DFA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($apprenants as $classe => $eleves)
-                        {{-- Ligne de séparation ou titre de classe --}}
-                        <tr style="background-color: #f0f0f0; font-weight: bold;">
-                            <td colspan="10" style="text-align: left; padding-left: 10px; font-size: 16px !important;">
-                                Classe : {{ $classe }}
-                            </td>
-                        </tr>
-                        @foreach ($eleves as $index => $apprenant)
-                        <tr style="text-align: center">
-                            <td style="height: 35px;">{{ $index + 1 }}</td>
-                            <td>{{ $apprenant->matriculeap ?? 'Non renseigné' }}</td>
-                            <td>{{ $apprenant->nom . ' ' . $apprenant->prenoms ?? 'Non renseigné' }}</td>
-                            <td>{{ $apprenant->datenaissance }}</td>
-                            <td>{{ $apprenant->lieunaissance ?? 'Non renseigné' }}</td>
-                            <td>{{ $apprenant->sexe ?? 'Non renseigné' }}</td>
-                            <td>{{ $apprenant->nationalite ?? 'Non renseigné' }}</td>
-                            <td>{{ $apprenant->la_classe ?? 'Non renseigné' }}</td>
-                            <td>{{ $apprenant->libelle_handicap ?? 'Sans handicap' }}</td>
-                            <td>{{ $apprenant->moyenne2eme ?? '' }}</td>
-                            <td>{{ $apprenant->moyenneannee ?? '' }}</td>
-                            <td>{{ $apprenant->libelledecision ?? '' }}</td>
-                        </tr>
-                        @endforeach
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 5%">N°</th>
-                            <th style="width: 9%">Matricule</th>
-                            <th>Nom & Prénoms</th>
-                            <th style="width: 8%">Date de naissance</th>
-                            <th>Lieu de naissance</th>
-                            <th style="width: 5%">Sexe</th>
-                            <th>Nationalité</th>
-                            <th>Classe</th>
-                            <th>Handicap</th>
-                            <th>Moyenne 2eme semestre</th>
-                            <th>Moyenne annuelle</th>
-                            <th>DFA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="11"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Résulats aux examens</span>
-                </p>
-
-                @if ($nbre_resultatexamens > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;font-size: 14px !important; text-align: center;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Diplome préparé</th>
-                            <th>Filières</th>
-                            <th>Filles</th>
-                            <th>Garçons</th>
-                            <th>Total</th>
-                            <th>Nombre de fille admises</th>
-                            <th>Nombre de gaçon admis </th>
-                            <th>Nombre d'admis total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($resultatexamens as $resultatexamen)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $resultatexamen->libellediplome ?? 'Non renseigné' }}</td>
-                            <td>{{ $resultatexamen->libellefiliere ?? 'Non renseigné' }}</td>
-                            <td>{{ $resultatexamen->nombrecandidat_f ?? 'Non renseigné' }}</td>
-                            <td>{{ $resultatexamen->nombrecandidat_g ?? 'Non renseigné' }}</td>
-                            <td>{{ $resultatexamen->nombrecandidat_t ?? 'Non renseigné' }}</td>
-                            <td>{{ $resultatexamen->nombreadmis_f ?? 'Non renseigné' }}</td>
-                            <td>{{ $resultatexamen->nombreadmis_g ?? 'Non renseigné' }}</td>
-                            <td>{{ $resultatexamen->nombreadmis_t ?? 'Non renseigné' }}</td>
-
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Diplome préparé</th>
-                            <th>Filières</th>
-                            <th>Filles</th>
-                            <th>Garçons</th>
-                            <th>Total</th>
-                            <th>Nombre de fille admises</th>
-                            <th>Nombre de garçon admis </th>
-                            <th>Nombre d'admis total</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="9"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Infrastructures et locaux</span>
-                </p>
-
-                @if ($nbre_infrastructures > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; font-size: 14px !important; text-align: center">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Libellé</th>
-                            <th>Nombre</th>
-                            <th>Capacité</th>
-                            <th>Nombre de bureau</th>
-                            <th>Fonctionnels</th>
-                            <th>Non fonctionnels</th>
-                            <th>Observation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach ($infrastructures as $infrastructure)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $infrastructure->libelleinfrastructure ?? 'Non renseigné' }}</td>
-                            <td>{{ $infrastructure->nombre ?? 'Non renseigné' }}</td>
-                            <td>{{ $infrastructure->cap ?? 'Non renseigné' }}</td>
-                            <td>{{ $infrastructure->nombrebureaux ?? 'Non renseigné' }}</td>
-                            <td>{{ $infrastructure->nbrefonctionnel ?? 'Non renseigné' }}</td>
-                            <td>{{ $infrastructure->nbrenonfonctionel ?? 'Non renseigné' }}</td>
-                            <td>{{ $infrastructure->obs ?? 'Non renseigné' }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Libellé</th>
-                            <th>Nombre</th>
-                            <th>Capacité</th>
-                            <th>Nombre de bureau</th>
-                            <th>Fonctionnels</th>
-                            <th>Non fonctionnels</th>
-                            <th>Observation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="7"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Besoin en matériels et divers</span>
-                </p>
-
-                @if ($nbre_besoinsenmateriels > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; font-size: 14px !important; text-align: center">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Quantité</th>
-                            <th>Matériel</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach ($besoinsenmateriels as $besoinsenmateriel)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $besoinsenmateriel->quantite ?? 'Non renseigné' }}</td>
-                            <td>{{ $besoinsenmateriel->libellemateriel ?? 'Non renseigné' }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Quantité</th>
-                            <th>Matériel</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="3"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-                <br><br>
-
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Les prévisions</span>
-                </p>
-
-                @if ($nbre_previsions > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; font-size: 14px !important; text-align: center">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Contenu</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach ($previsions as $prevision)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $prevision->libelleprevision ?? 'Non renseigné' }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Contenu</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="2"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Etat des difficultés de gestion et
-                        suggestions</span>
-                </p>
-
-                @if ($nbre_etatgestions > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed; font-size: 14px !important; text-align: center">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Nature</th>
-                            <th>Difficultés</th>
-                            <th>Causes</th>
-                            <th>Suggestions</th>
-                            <th>Observations</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach ($etatgestions as $etatgestion)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $etatgestion->nature ?? 'Non renseigné' }}</td>
-                            <td>{{ $etatgestion->difficultes ?? 'Non renseigné' }}</td>
-                            <td>{{ $etatgestion->causes ?? 'Non renseigné' }}</td>
-                            <td>{{ $etatgestion->suggestions ?? 'Non renseigné' }}</td>
-                            <td>{{ $etatgestion->observations ?? 'Non renseigné' }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Nature</th>
-                            <th>Difficultés</th>
-                            <th>Causes</th>
-                            <th>Suggestions</th>
-                            <th>Observations</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="6"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Equipements</span>
-                </p>
-
-                {{-- A VERIFIER AVANT DE SUPPRIMER --}}
-
-                @if ($nbre_equipements > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;font-size: 14px !important; text-align: center;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Matériel</th>
-                            <th>Nombre</th>
-                            <th>Fonctionnels</th>
-                            <th>Non fonctionnels</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($equipements as $equipement)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $equipement->libellemateriel ?? 'Non renseigné' }}</td>
-                            <td>{{ $equipement->nombre ?? 'Non renseigné' }}</td>
-                            <td>{{ $equipement->nbrefonctionnel ?? 'Non renseigné' }}</td>
-                            <td>{{ $equipement->nbrenonfonctionel ?? 'Non renseigné' }}</td>
-
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Matériel</th>
-                            <th>Nombre</th>
-                            <th>Fonctionnels</th>
-                            <th>Non fonctionnels</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="5"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-
-                <br><br>
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Besoin en formation</span>
-                </p>
-
-                @if ($nbre_besoins > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;font-size: 14px !important; text-align: center;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Type d'autorisation</th>
-                            <th>Nombre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($besoins as $besoin)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $besoin->typeautorisation ?? 'Non renseigné' }}</td>
-                            <td>{{ $besoin->nombre ?? 'Non renseigné' }}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Type d'autorisation</th>
-                            <th>Nombre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="3"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-
-
-                <br><br>
-                {{-- A VERIFIER AVANT DE SUPPRIMER --}}
-
-                <p>
-                    <span style="font-family: Helvetica; font-weight: bold">Conclusion</span>
-                </p>
-
-                @if ($nbre_conclusions > 0)
-                <table border="1" cellpadding="8" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;font-size: 14px !important; text-align: center;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Contenu</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($conclusions as $conclusion)
-                        <tr>
-                            <td style="height: 35px;">{{ $loop->iteration }}</td>
-                            <td>{{ $conclusion->libelleconclusion ?? 'Non renseigné' }}</td>
-
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @else
-                <table border="1" cellpadding="15" cellspacing="0"
-                    style="width: 100%; table-layout: fixed;">
-                    <thead>
-                        <tr>
-                            <th style="width: 3%;">N°</th>
-                            <th>Contenu</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="2"
-                                style="color: #ed7d31; font-weight: bold; font-style: italic; text-align: center">
-                                Aucune
-                                donnée
-                                existante.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                @endif
-            </div>
-        </div>
+    </div>
+
+    <h3 style="padding:10px 30px; border: 2px solid black; text-align:center; font-size:14px;">
+        RAPPORT DE FIN D'ANNÉE DE FORMATION {{ date('Y') }}-{{ date('Y') + 1 }}
+    </h3>
+
+    <p style="font-weight:bold; margin-top:14px;">ETABLISSEMENT :
+        {{ $etablissements->denominationetab ?? '....................................' }}
+    </p>
+
+    {{-- SOMMAIRE --}}
+    <h2>SOMMAIRE</h2>
+    <p>INTRODUCTION</p>
+    <p>1 - PRESENTATION DE L'ETABLISSEMENT ET DES FILIERES DE FORMATION</p>
+    <p>&nbsp;&nbsp;&nbsp;- Présentation de l'établissement</p>
+    <p>&nbsp;&nbsp;&nbsp;- Filières et durée de formation</p>
+    <p>&nbsp;&nbsp;&nbsp;- Nombre de classes par filière</p>
+    <p>2 - LES EFFECTIFS DU PERSONNEL</p>
+    <p>&nbsp;&nbsp;&nbsp;- Personnels Administratifs, d'encadrement et autres</p>
+    <p>&nbsp;&nbsp;&nbsp;- Personnels enseignants</p>
+    <p>&nbsp;&nbsp;&nbsp;- Besoins en personnels Administratifs, d'encadrement et autres</p>
+    <p>&nbsp;&nbsp;&nbsp;- Besoins en personnels enseignants</p>
+    <p>3 - EFFECTIFS ET SITUATION DES APPRENANTS</p>
+    <p>4 - RESULTATS SCOLAIRES</p>
+    <p>&nbsp;&nbsp;&nbsp;- Résultats de fin d'année</p>
+    <p>&nbsp;&nbsp;&nbsp;- Résultats aux examens scolaires</p>
+    <p>&nbsp;&nbsp;&nbsp;- Indicateurs de performance</p>
+    <p>5 - ETAT DES INFRASTRUCTURES</p>
+    <p>6 - BESOINS EN MATERIELS ET EQUIPEMENTS</p>
+    <p>7 - GESTION FINANCIERE</p>
+    <p>8 - ACTIVITES EXTRA-SCOLAIRES</p>
+    <p>9 - DIFFICULTES RENCONTREES ET SUGGESTIONS</p>
+    <p>10 - PRÉVISIONS / PERSPECTIVES POUR L'ANNÉE DE FORMATION SUIVANTE</p>
+    <p>CONCLUSION GENERALE</p>
+    <p>ANNEXES</p>
+
+</div>
+
+{{-- ================================================================
+     PAGE 2 — IDENTIFICATION
+     ================================================================ --}}
+<div class="page">
+    <h2>I - IDENTIFICATION</h2>
+
+    <p><strong>I-1. Dénomination de l'établissement (en entier et en lettres capitales)</strong></p>
+    <p><strong>{{ $etablissements->denominationetab ?? 'Non renseigné' }}</strong>
+        &nbsp;&nbsp; Sigle : {{ $etablissements->sigle ?? 'Non renseigné' }}</p>
+
+    <p><strong>I-2. Contacts de l'établissement</strong></p>
+    <p>Téléphone Cel : <strong>{{ $etablissements->contact ?? 'Non renseigné' }}</strong>
+       &nbsp;&nbsp; Fixe : _______________</p>
+    <p>Nom et Prénoms du Fondateur : <strong>{{ $etablissements->nomfondateur ?? 'Non renseigné' }}</strong></p>
+
+    <p>I-3. Ordre d'enseignement : <strong>{{ $etablissements->libelleenseignement ?? 'Non renseigné' }}</strong></p>
+    <p>I-4. Code de l'établissement : <strong>{{ $etablissements->code ?? 'Non renseigné' }}</strong></p>
+
+    <p><strong>I-6. Localisation</strong></p>
+    <p>I-6-1. Direction régionale / département : <strong>{{ $etablissements->denominationdd ?? 'Non renseigné' }}</strong></p>
+    <p>I-6-2. Commune : <strong>{{ $etablissements->denominationcommune ?? 'Non renseigné' }}</strong></p>
+    <p>I-6-3. Quartier : <strong>{{ $etablissements->localisation ?? 'Non renseigné' }}</strong></p>
+    <p>I-6-4. GPS : <strong>{{ $etablissements->latitude ?? '—' }}, {{ $etablissements->longitude ?? '—' }}</strong></p>
+
+    <p><strong>I-7. Numéros d'identification</strong></p>
+    <p>I-7-1. Numéro d'autorisation de création :
+        <strong>{{ $etablissements->numautorisationcreation ?? 'Non renseigné' }}</strong></p>
+    <p>I-7-2. Numéro d'autorisation d'ouverture :
+        <strong>{{ $etablissements->numautorisationouverture ?? 'Non renseigné' }}</strong></p>
+</div>
+
+{{-- ================================================================
+     PAGE 3 — FILIERES + CLASSES + PERSONNELS
+     ================================================================ --}}
+<div class="page">
+
+    {{-- 1.2 Filières et durée de formation --}}
+    <h2>1 - PRESENTATION DE L'ETABLISSEMENT ET DES FILIERES</h2>
+    <p class="section-title">1.2. Filières et durée de formation</p>
+
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>FILIERES</th>
+                <th>DIPLÔMES PREPARES</th>
+                <th>DUREE DES ETUDES</th>
+                <th>DEBOUCHES</th>
+                <th>OBSERVATIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_filiere_enseignes > 0)
+                @foreach($filiere_enseignes as $fe)
+                <tr>
+                    <td style="text-align:center">{{ $loop->iteration }}</td>
+                    <td>{{ $fe->libellefiliere ?? '' }}</td>
+                    <td>{{ $fe->libellediplome ?? '' }}</td>
+                    <td style="text-align:center">{{ $fe->dureeformation ?? '' }}</td>
+                    <td>{{ $fe->debouches ?? '' }}</td>
+                    <td>{{ $fe->observations ?? '' }}</td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="6" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+    {{-- 1.3 Nombre de classes par filière --}}
+    <p class="section-title">1.3. Nombre de classes par filière</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Dénomination</th>
+                <th>Groupe pédagogique</th>
+                <th>Effectif total</th>
+                <th>Garçons</th>
+                <th>Filles</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_classes > 0)
+                @foreach($classes as $classe)
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $classe->denominationclasse ?? '' }}</td>
+                    <td>{{ $classe->libellegp ?? '' }}</td>
+                    <td>{{ $classe->effectif_total ?? '' }}</td>
+                    <td>{{ $classe->effectif_gar ?? '' }}</td>
+                    <td>{{ $classe->effectif_fil ?? '' }}</td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="6" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+</div>
+
+{{-- ================================================================
+     PAGE 4 — EFFECTIFS DU PERSONNEL
+     ================================================================ --}}
+<div class="page">
+    <h2>2 - LES EFFECTIFS DU PERSONNEL</h2>
+
+    {{-- Personnels enseignants par discipline et grade --}}
+    <p class="section-title">Personnels enseignants</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th rowspan="2" style="width:4%">N°</th>
+                <th rowspan="2">Discipline</th>
+                <th colspan="4">Existants et Grades</th>
+                <th rowspan="2">TOTAL</th>
+                <th rowspan="2">Nécessaire</th>
+                <th rowspan="2">Ecarts</th>
+                <th rowspan="2">Observations</th>
+            </tr>
+            <tr>
+                <th>PETP</th>
+                <th>PLP</th>
+                <th>PCFP</th>
+                <th>IFPB</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($personnels_enseignants_par_discipline->count() > 0)
+                @foreach($personnels_enseignants_par_discipline as $pe)
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align:left">{{ $pe->libellediscipline ?? '' }}</td>
+                    <td>{{ $pe->nb_petp }}</td>
+                    <td>{{ $pe->nb_plp }}</td>
+                    <td>{{ $pe->nb_pcfp }}</td>
+                    <td>{{ $pe->nb_ifpb }}</td>
+                    <td>{{ $pe->nb_total }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="10" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+    {{-- Personnels administratifs par fonction --}}
+    <p class="section-title">Personnels Administratifs, d'encadrement et autres</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Fonctions</th>
+                <th>Existants</th>
+                <th>Nécessaire</th>
+                <th>Ecarts</th>
+                <th>Observations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($personnels_admins_par_fonction->count() > 0)
+                @foreach($personnels_admins_par_fonction as $pa)
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align:left">{{ $pa->libellefonction ?? '' }}</td>
+                    <td>{{ $pa->nb_existants }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="6" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+    {{-- Besoins en personnels enseignants --}}
+    <p class="section-title">Besoins en personnels enseignants</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Discipline</th>
+                <th>Nombre</th>
+                <th>Niveau de Qualification</th>
+                <th>Observations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_besoinpersonnelens > 0)
+                @foreach($besoinpersonnelens as $bp)
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align:left">{{ $bp->libellediscipline ?? 'Non renseigné' }}</td>
+                    <td>{{ $bp->nombre ?? '' }}</td>
+                    <td>{{ $bp->libelleniveau ?? '' }}</td>
+                    <td></td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="5" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+    {{-- Besoins en personnels administratifs --}}
+    <p class="section-title">Besoins en personnels administratifs, d'encadrement et autres</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Fonction</th>
+                <th>Nombre</th>
+                <th>Niveau de Qualification</th>
+                <th>Observations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_besoinpersonnel_admins > 0)
+                @foreach($besoinpersonnel_admins as $ba)
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align:left">{{ $ba->libellefonction ?? 'Non renseigné' }}</td>
+                    <td>{{ $ba->nombre ?? '' }}</td>
+                    <td>{{ $ba->libelletypepersonnel ?? '' }}</td>
+                    <td></td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="5" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+</div>
+
+{{-- ================================================================
+     PAGE 5 — EFFECTIFS ET SITUATION DES APPRENANTS
+     ================================================================ --}}
+<div class="page">
+    <h2>3 - EFFECTIFS ET SITUATION DES APPRENANTS</h2>
+
+    <table border="1" cellspacing="0" style="font-size:10px;">
+        <thead>
+            <tr>
+                <th rowspan="3" style="width:4%">N°</th>
+                <th rowspan="3">Niveau / Filière</th>
+                <th colspan="3" rowspan="2">Effectifs</th>
+                <th colspan="6">Bourses</th>
+                <th colspan="4">Régime</th>
+            </tr>
+            <tr>
+                <th colspan="2">BE</th>
+                <th colspan="2">½ B</th>
+                <th colspan="2">NB</th>
+                <th colspan="2">Interne</th>
+                <th colspan="2">Externe</th>
+            </tr>
+            <tr>
+                <th>F</th><th>G</th><th>T</th>
+                <th>F</th><th>G</th>
+                <th>F</th><th>G</th>
+                <th>F</th><th>G</th>
+                <th>F</th><th>G</th>
+                <th>F</th><th>G</th>
+            </tr>
+        </thead>
+        <tbody>
+            @php
+                $total_f=0; $total_g=0; $total_t=0;
+                $tbe_f=0; $tbe_g=0; $tdemi_f=0; $tdemi_g=0; $tnb_f=0; $tnb_g=0;
+                $tint_f=0; $tint_g=0; $text_f=0; $text_g=0;
+            @endphp
+            @if($boursiers->count() > 0)
+                @foreach($boursiers as $b)
+                @php
+                    $f = $b->effectif_fil ?? 0; $g = $b->effectif_gar ?? 0; $t = $b->effectif_total ?? 0;
+                    $total_f+=$f; $total_g+=$g; $total_t+=$t;
+                    $tbe_f+=$b->be_f; $tbe_g+=$b->be_g;
+                    $tdemi_f+=$b->demi_b_f; $tdemi_g+=$b->demi_b_g;
+                    $tnb_f+=$b->nb_f; $tnb_g+=$b->nb_g;
+                    $tint_f+=$b->interne_f; $tint_g+=$b->interne_g;
+                    $text_f+=$b->externe_f; $text_g+=$b->externe_g;
+                @endphp
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align:left">{{ $b->denominationclasse ?? '' }} — {{ $b->libellegp ?? '' }}</td>
+                    <td>{{ $f }}</td><td>{{ $g }}</td><td>{{ $t }}</td>
+                    <td>{{ $b->be_f }}</td><td>{{ $b->be_g }}</td>
+                    <td>{{ $b->demi_b_f }}</td><td>{{ $b->demi_b_g }}</td>
+                    <td>{{ $b->nb_f }}</td><td>{{ $b->nb_g }}</td>
+                    <td>{{ $b->interne_f }}</td><td>{{ $b->interne_g }}</td>
+                    <td>{{ $b->externe_f }}</td><td>{{ $b->externe_g }}</td>
+                </tr>
+                @endforeach
+                <tr style="text-align:center; font-weight:bold; background:#dde;">
+                    <td colspan="2">TOTAL</td>
+                    <td>{{ $total_f }}</td><td>{{ $total_g }}</td><td>{{ $total_t }}</td>
+                    <td>{{ $tbe_f }}</td><td>{{ $tbe_g }}</td>
+                    <td>{{ $tdemi_f }}</td><td>{{ $tdemi_g }}</td>
+                    <td>{{ $tnb_f }}</td><td>{{ $tnb_g }}</td>
+                    <td>{{ $tint_f }}</td><td>{{ $tint_g }}</td>
+                    <td>{{ $text_f }}</td><td>{{ $text_g }}</td>
+                </tr>
+            @else
+                <tr><td colspan="15" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+</div>
+
+{{-- ================================================================
+     PAGE 6 — RESULTATS SCOLAIRES
+     ================================================================ --}}
+<div class="page">
+    <h2>4 - RESULTATS SCOLAIRES</h2>
+
+    {{-- Résultats de fin d'année --}}
+    <p class="section-title">Résultats de fin d'année de formation</p>
+    <table border="1" cellspacing="0" style="font-size:10px;">
+        <thead>
+            <tr>
+                <th rowspan="2" style="width:4%">N°</th>
+                <th rowspan="2">Filières</th>
+                <th rowspan="2">Niveau</th>
+                <th colspan="3">Effectifs</th>
+                <th colspan="3">Admis</th>
+                <th colspan="3">Redoublants</th>
+                <th colspan="3">Réorientés</th>
+                <th rowspan="2">Observations</th>
+            </tr>
+            <tr>
+                <th>F</th><th>G</th><th>T</th>
+                <th>F</th><th>G</th><th>T</th>
+                <th>F</th><th>G</th><th>T</th>
+                <th>F</th><th>G</th><th>T</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_resultats_fin_annee > 0)
+                @foreach($resultats_fin_annee as $r)
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align:left">{{ $r->libellefiliere ?? '' }}</td>
+                    <td>{{ $r->niveau ?? '' }}</td>
+                    <td>{{ $r->effectif_f }}</td><td>{{ $r->effectif_g }}</td><td>{{ $r->effectif_t }}</td>
+                    <td>{{ $r->admis_f }}</td><td>{{ $r->admis_g }}</td><td>{{ $r->admis_t }}</td>
+                    <td>{{ $r->redoublants_f }}</td><td>{{ $r->redoublants_g }}</td><td>{{ $r->redoublants_t }}</td>
+                    <td>{{ $r->reorientes_f }}</td><td>{{ $r->reorientes_g }}</td><td>{{ $r->reorientes_t }}</td>
+                    <td></td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="16" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+    {{-- Résultats aux examens scolaires --}}
+    <p class="section-title">Résultats aux examens scolaires</p>
+    <table border="1" cellspacing="0" style="font-size:10px;">
+        <thead>
+            <tr>
+                <th rowspan="2" style="width:4%">N°</th>
+                <th rowspan="2">Examens</th>
+                <th rowspan="2">Filières</th>
+                <th colspan="3">Nombre de Candidats</th>
+                <th colspan="3">Nombre d'admis</th>
+                <th rowspan="2">% Admis</th>
+                <th rowspan="2">Observations</th>
+            </tr>
+            <tr>
+                <th>F</th><th>G</th><th>T</th>
+                <th>F</th><th>G</th><th>T</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_resultatexamens > 0)
+                @foreach($resultatexamens as $re)
+                @php
+                    $pct = $re->nombrecandidat_t > 0
+                        ? round(($re->nombreadmis_t / $re->nombrecandidat_t) * 100, 1) . ' %'
+                        : '—';
+                @endphp
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $re->libellediplome ?? '' }}</td>
+                    <td style="text-align:left">{{ $re->libellefiliere ?? '' }}</td>
+                    <td>{{ $re->nombrecandidat_f ?? '' }}</td>
+                    <td>{{ $re->nombrecandidat_g ?? '' }}</td>
+                    <td>{{ $re->nombrecandidat_t ?? '' }}</td>
+                    <td>{{ $re->nombreadmis_f ?? '' }}</td>
+                    <td>{{ $re->nombreadmis_g ?? '' }}</td>
+                    <td>{{ $re->nombreadmis_t ?? '' }}</td>
+                    <td>{{ $pct }}</td>
+                    <td></td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="11" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+    {{-- Indicateurs de performance --}}
+    <p class="section-title">Indicateurs de performance</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N</th>
+                <th>INDICATEURS-CLES DE PERFORMANCE</th>
+                <th>TAUX OBTENUS {{ date('Y') }}-{{ date('Y')+1 }}</th>
+                <th>OBSERVATIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            @php
+            $indicateurs_defaut = [
+                '01' => "Le taux de réussite à l'examen du CAP",
+                '02' => "Le taux de réussite à l'examen du BT",
+                '03' => "Le taux de réussite à l'examen du BTS",
+                '04' => "Le taux d'obtention du diplôme en % des admissions initiales",
+                '05' => "Le taux de décrochage",
+                '06' => "Le taux de satisfaction des apprenants",
+                '07' => "Le taux de satisfaction des Entreprises",
+                '08' => "Le taux de présence ou de participation des apprenants au cours",
+                '09' => "Le taux de présence des formateurs au cours",
+                '10' => "Le taux d'apprenants de 1A mis en stage",
+                '11' => "Le taux d'apprenants de 2A mis en stage",
+                '12' => "Le taux d'apprenants de 3A mis en stage",
+                '13' => "Taux d'apprenants admis en classe supérieure",
+                '14' => "Taux d'apprenants admis à redoubler",
+                '15' => "Taux d'apprenants réorientés",
+                '16' => "Le taux d'apprenants diplômés insérés 12 mois après la fin du cycle",
+            ];
+            @endphp
+            @foreach($indicateurs_defaut as $num => $libelle)
+            <tr>
+                <td style="text-align:center">{{ $num }}</td>
+                <td>{{ $libelle }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+
+{{-- ================================================================
+     PAGE 7 — INFRASTRUCTURES + EQUIPEMENTS + BESOINS MATERIELS
+     ================================================================ --}}
+<div class="page">
+    <h2>5 - ETAT DES INFRASTRUCTURES</h2>
+
+    <p class="section-title">Nombre de bâtiments</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Libellé</th>
+                <th>Nombre</th>
+                <th>Capacité</th>
+                <th>Fonctionnels</th>
+                <th>Non fonctionnels</th>
+                <th>Observation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_infrastructures > 0)
+                @foreach($infrastructures as $infra)
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align:left">{{ $infra->libelleinfrastructure ?? '' }}</td>
+                    <td>{{ $infra->nombre ?? '' }}</td>
+                    <td>{{ $infra->cap ?? '' }}</td>
+                    <td>{{ $infra->nbrefonctionnel ?? '' }}</td>
+                    <td>{{ $infra->nbrenonfonctionel ?? '' }}</td>
+                    <td>{{ $infra->obs ?? '' }}</td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="7" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+    <h2>6 - BESOINS EN MATERIELS ET EQUIPEMENTS</h2>
+
+    <p class="section-title">Besoins en matériels</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Désignation</th>
+                <th>Quantité</th>
+                <th>Observations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_besoinsenmateriels > 0)
+                @foreach($besoinsenmateriels as $bm)
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align:left">{{ $bm->libellemateriel ?? 'Non renseigné' }}</td>
+                    <td>{{ $bm->quantite ?? '' }}</td>
+                    <td></td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="4" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+    <p class="section-title">Equipements existants</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Matériel</th>
+                <th>Nombre</th>
+                <th>Fonctionnels</th>
+                <th>Non fonctionnels</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_equipements > 0)
+                @foreach($equipements as $eq)
+                <tr style="text-align:center">
+                    <td>{{ $loop->iteration }}</td>
+                    <td style="text-align:left">{{ $eq->libellemateriel ?? 'Non renseigné' }}</td>
+                    <td>{{ $eq->nombre ?? '' }}</td>
+                    <td>{{ $eq->nbrefonctionnel ?? '' }}</td>
+                    <td>{{ $eq->nbrenonfonctionel ?? '' }}</td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="5" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+</div>
+
+{{-- ================================================================
+     PAGE 8 — GESTION FINANCIERE + ACTIVITES + DIFFICULTES + PREVISIONS
+     ================================================================ --}}
+<div class="page">
+    <h2>7 - GESTION FINANCIERE</h2>
+
+    <p class="section-title">Informations sur le compte bancaire</p>
+    <p>Etablissement financier : ___________________________________________</p>
+    <p>Numéro du compte : ___________________________________________</p>
+
+    <p class="section-title">Ressources additionnelles — Frais d'inscription et de scolarité</p>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nature</th>
+                <th>Nombre d'élèves</th>
+                <th>Total perçus</th>
+                <th>Part établissement</th>
+                <th>Part versée au fonds école</th>
+                <th>Observations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Frais de scolarité</td>
+                <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr style="font-weight:bold">
+                <td>TOTAL</td>
+                <td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>8 - ACTIVITES EXTRA-SCOLAIRES</h2>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Nature</th>
+                <th>Objectifs</th>
+                <th>Observations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_activites_extra > 0)
+                @foreach($activites_extra as $act)
+                <tr>
+                    <td style="text-align:center">{{ $loop->iteration }}</td>
+                    <td>{{ $act->nature ?? '' }}</td>
+                    <td>{{ $act->objectifs ?? '' }}</td>
+                    <td>{{ $act->observations ?? '' }}</td>
+                </tr>
+                @endforeach
+            @else
+                <tr><td colspan="4" class="no-data">Aucune donnée existante.</td></tr>
+            @endif
+        </tbody>
+    </table>
+
+    <h2>9 - DIFFICULTES RENCONTREES ET SUGGESTIONS</h2>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Nature</th>
+                <th>Difficultés</th>
+                <th>Causes</th>
+                <th>Propositions et Suggestions</th>
+                <th>Observations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_etatgestions > 0)
+                @foreach($etatgestions as $eg)
+                <tr>
+                    <td style="text-align:center">{{ $loop->iteration }}</td>
+                    <td>{{ $eg->nature ?? '' }}</td>
+                    <td>{{ $eg->difficultes ?? '' }}</td>
+                    <td>{{ $eg->causes ?? '' }}</td>
+                    <td>{{ $eg->suggestions ?? '' }}</td>
+                    <td>{{ $eg->observations ?? '' }}</td>
+                </tr>
+                @endforeach
+            @else
+                <tr>
+                    <td style="text-align:center">1</td>
+                    <td>PEDAGOGIQUE</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center">2</td>
+                    <td>ADMINISTRATIVE</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center">3</td>
+                    <td>AUTRES</td><td></td><td></td><td></td><td></td>
+                </tr>
+            @endif
+        </tbody>
+    </table>
+
+    <h2>10 - PREVISIONS / PERSPECTIVES POUR L'ANNEE SUIVANTE</h2>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:4%">N°</th>
+                <th>Nature</th>
+                <th>Objectif</th>
+                <th>Observations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($nbre_previsions > 0)
+                @foreach($previsions as $prev)
+                <tr>
+                    <td style="text-align:center">{{ $loop->iteration }}</td>
+                    <td>{{ $prev->libelleprevision ?? '' }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                @endforeach
+            @else
+                @for($i = 1; $i <= 5; $i++)
+                <tr><td style="text-align:center">{{ $i }}</td><td></td><td></td><td></td></tr>
+                @endfor
+            @endif
+        </tbody>
+    </table>
+
+    <h2>CONCLUSION GENERALE</h2>
+    @if($nbre_conclusions > 0)
+        @foreach($conclusions as $concl)
+        <p>{{ $concl->libelleconclusion ?? '' }}</p>
+        @endforeach
+    @else
+        <p>______________________________________________________________</p>
+        <p>______________________________________________________________</p>
+    @endif
+</div>
+
+{{-- ================================================================
+     ANNEXES — Résultats scolaires par classe (liste nominative)
+     ================================================================ --}}
+<div class="page-break">
+    <h2>ANNEXES DU RAPPORT DE FIN D'ANNEE</h2>
+    <p><em>Résultats Scolaires par classe</em></p>
+</div>
+
+@if($nbre_apprenants > 0)
+    @foreach($apprenants as $classe => $eleves)
+    <div class="{{ !$loop->last ? 'page' : '' }}">
+        <p><strong>Classe : {{ $classe }}</strong>
+           &nbsp;&nbsp; Effectif : {{ $eleves->count() }}</p>
+        <table border="1" cellspacing="0" style="font-size:10px;">
+            <thead>
+                <tr>
+                    <th style="width:4%">N°</th>
+                    <th>Nom</th>
+                    <th>Prénoms</th>
+                    <th>Moyenne annuelle</th>
+                    <th>Rang</th>
+                    <th>Etat de Bourse</th>
+                    <th>Décision de fin d'année</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($eleves as $index => $apprenant)
+                <tr style="text-align:center">
+                    <td>{{ $index + 1 }}</td>
+                    <td style="text-align:left">{{ $apprenant->nom ?? '' }}</td>
+                    <td style="text-align:left">{{ $apprenant->prenoms ?? '' }}</td>
+                    <td>{{ $apprenant->moyenneannee ?? '' }}</td>
+                    <td></td>
+                    <td>{{ $apprenant->libellebourse ?? '' }}</td>
+                    <td>{{ $apprenant->libelledecision ?? '' }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <p style="font-size:10px;"><strong>NB :</strong>
+            Décision de fin d'année = <strong>Admis</strong> ou <strong>Report</strong>
+            ou <strong>Redoublant</strong> ou <strong>Réorienté</strong><br>
+            Etat de bourse = Boursier ou ½ Boursier ou Non boursier
+        </p>
+    </div>
+    @endforeach
+@else
+    <p class="no-data">Aucun apprenant enregistré.</p>
+@endif
+
 </body>
-
 </html>

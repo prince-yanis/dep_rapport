@@ -102,6 +102,10 @@ class Etablissementannee extends Model
 	{
 		return $this->hasMany(Activitesportive::class, 'etablissementannees_id');
 	}
+	public function activitesextrascolaires()
+	{
+		return $this->hasMany(Activitesextrascolaire::class, 'etablissementannees_id');
+	}
 	public function besoins()
 	{
 		return $this->hasMany(Besoin::class, 'etablissementannees_id');
@@ -192,5 +196,11 @@ class Etablissementannee extends Model
 	{
 		return $this->hasMany(Perspective::class, 'etablissementannees_id');
 	}
+	
+	public function miseEnStages()
+	{
+		return $this->hasMany(MiseEnStage::class, 'etablissementannees_id');
+	}
+	
 	
 }

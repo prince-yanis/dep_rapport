@@ -49,6 +49,14 @@ class Apprenant extends Model
 		'nationalite'
 	];
 
+	/**
+	 * Get the full name of the apprenant.
+	 */
+	public function getNomCompletAttribute()
+	{
+		return $this->nom . ' ' . $this->prenoms;
+	}
+
 	public function handicaps()
 	{
 		return $this->belongsTo(Handicap::class, 'handicaps_id');

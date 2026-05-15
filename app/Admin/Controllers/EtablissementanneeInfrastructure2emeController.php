@@ -145,6 +145,8 @@ class EtablissementanneeInfrastructure2emeController extends AdminController
         <span >|</span>
         <span style="font-size: 14px";><a style="color:red !important;" href="/admin/etabanneeinfrastructure2eme/' . $EtabAnnee->id . '/edit">Infrastructure et Locaux</a></span>
         <span >|</span>
+        <span style="font-size: 14px";><a href="/admin/etabanneeactivitesextrascolaire/'. $EtabAnnee->id .'/edit">Infrastructure et Locaux</a></span>
+        <span >|</span>
         <span style="font-size: 14px";><a href="/admin/etabanneebesoinmateriel/' . $EtabAnnee->id . '/edit">Besoin en Matériels et Divers</a></span>
         <span >|</span>
         <span style="font-size: 14px";><a href="/admin/etabanneeprevision2eme/' . $EtabAnnee->id . '/edit">Prévision</a></span>
@@ -262,7 +264,7 @@ class EtablissementanneeInfrastructure2emeController extends AdminController
             ->where('etablissements_id', '=', session('etablissementchoisi'))				
             ->first();
 
-              return redirect('admin/etabanneebesoinmateriel/'.$EtabAnnee->id.'/edit');
+              return redirect('admin/etabanneeactivitesextrascolaire/'.$EtabAnnee->id.'/edit');
   
           });
         return $form;

@@ -261,6 +261,8 @@ class EtablissementanneeExecutionBudgetController extends AdminController
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneepoint/' . $EtabAnnee->id . '/edit">Progression</a></span>
                 <span >|</span>
+                <span style="font-size: 14px";><a href="/admin/etabanneemiseenstage/' . $EtabAnnee->id . '/edit">Mise en Stage</a></span>
+                <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneeindicateurs/' . $EtabAnnee->id . '/edit">Indicateurs</a></span>
                 <span >|</span>
                 <span style="font-size: 14px";><a href="/admin/etabanneeinfrastructure/' . $EtabAnnee->id . '/edit">Infrastructure et Locaux</a></span>
